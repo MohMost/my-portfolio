@@ -39,10 +39,14 @@ function Skills() {
     purple: "#A259FF",
   };
   return (
-    <Section className="flex flex-col gap-4">
-      <h2 className="text-xl w-full font-semibold tracking-wider text-secondary">
-        Skills
-      </h2>
+    <Section id="skills" className="flex flex-col gap-4 my-28">
+      <div className="flex flex-row justify-start items-center gap-2 w-fit">
+        <h2 className="text-xl  font-semibold tracking-wider text-secondary">
+          Skills
+        </h2>
+        <div className="w-[300px] h-0.5 bg-secondary/20"></div>
+      </div>
+
       <h3 className="dark:text-gray-400 text-gray-700 text-5xl font-bold fira-sans">
         The big three...
       </h3>
