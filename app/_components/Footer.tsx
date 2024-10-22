@@ -11,10 +11,10 @@ function Footer() {
     purple: "#A259FF",
   };
   return (
-    <Section className="flex flex-col  items-center gap-4 mt-28 mb-8">
+    <Section className="flex flex-col  justify-center items-center gap-4 mt-28 mb-8">
       <footer>
         <div className="flex flex-row justify-start items-center gap-2 w-fit">
-          <p>
+          <p className="text-center">
             Designed & Built by{""}
             <Link href="https://github.com/MohMost">
               <Button variant={"link"}>Mostefai Mohamed</Button>

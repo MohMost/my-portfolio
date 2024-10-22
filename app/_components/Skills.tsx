@@ -44,13 +44,13 @@ function Skills() {
         <h2 className="text-xl  font-semibold tracking-wider text-secondary">
           Skills
         </h2>
-        <div className="w-[300px] h-0.5 bg-secondary/20"></div>
+        <div className="md:w-[300px] w-full h-0.5 bg-secondary/20"></div>
       </div>
 
       <h3 className="dark:text-gray-400 text-gray-700 text-5xl font-bold fira-sans">
         The big three...
       </h3>
-      <div className="flex flex-row gap-8 my-8">
+      <div className="flex md:flex-row flex-col gap-4 my-8">
         <Card className="group flex flex-col gap-4 ">
           <CardHeader>
             <CardTitle>

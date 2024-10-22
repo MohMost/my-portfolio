@@ -1,16 +1,20 @@
 import Image from "next/image";
 import Section from "./Section";
 import Code from "@/components/ui/Code";
-
+import Link from "next/link";
+import GithubIcon from "./icons/GithubIcon";
+import LinkedinIcon from "./icons/LinkedinIcon";
+import InstagramIcon from "./icons/InstagramIcon";
+import { Mail } from "lucide-react";
 const Hero = () => {
   return (
-    <Section className="flex h-screen items-center justify-between">
-      <div className="flex items-center justify-between w-full w-2/3">
-        <div className="w-4/5">
+    <Section className="flex h-screen items-center justify-center w-full">
+      <div className="flex flex-col items-center justify-center w-full lg:w-2/3">
+        <div className="text-center lg:text-left w-full 2xl:w-3/4">
           <p className="text-xl w-full font-semibold tracking-wider text-secondary ">
             Hi, my name is
           </p>
-          <h1 className="2xl:text-6xl xl:text-5xl lg:text-2xl font-bold leading-snug tracking-tight  lg:leading-tight  xl:leading-tight dark:text-gray-300 text-black inconsolata-bold-title">
+          <h1 className=" 2xl:text-6xl xl:text-5xl lg:text-2xl font-bold leading-snug tracking-tight  lg:leading-tight  xl:leading-tight dark:text-gray-300 text-black inconsolata-bold-title">
             Mostefai Mohamed.
           </h1>
           <h1 className="2xl:text-5xl w-full xl:text-4xl lg:text-2xl text-4xl font-bold leading-snug tracking-tight  lg:leading-tight xl:leading-tight dark:text-gray-400 text-black/70 inconsolata-bold-title">
@@ -22,20 +26,49 @@ const Hero = () => {
             consumer use.
           </p>
         </div>
+        <ul className="flex md:hidden w-full flex-row justify-center items-center gap-6 text-white">
+          <li className="  text-base">
+            <Link className="flex justify-center" href="/">
+              <GithubIcon size={25} className="fill-gray-700 dark:fill-white" />
+            </Link>
+          </li>
+          <li className="text-base">
+            <Link className="flex justify-center" href="/about">
+              <LinkedinIcon
+                size={25}
+                className="fill-gray-700 dark:fill-white"
+              />
+            </Link>
+          </li>
+          <li className=" text-base">
+            <Link className="flex justify-center" href="/about">
+              <InstagramIcon
+                size={25}
+                className="fill-gray-700 dark:fill-white"
+              />
+            </Link>
+          </li>
+          <li className=" text-base">
+            <Link
+              className="flex justify-center"
+              href="mailto:mohmost32@gmail.com"
+            >
+              <Mail size={25} />
+            </Link>
+          </li>
+        </ul>
       </div>
-      <div className="flex items-center justify-center w-full w-1/3">
-        <div className="">
-          <HeroSVG />
-        </div>
+      <div className="hidden md:flex items-center justify-center w-full ">
+        <HeroSVG />
       </div>
     </Section>
   );
 };
 function HeroSVG() {
   return (
-    <div>
+    <div className="hidden md:block">
       <svg
-        className="2xl:w-[700px] xl:w-[400px] lg:w-[200px] h-auto"
+        className="w-full md:w-[400px] 2xl:w-[500px] h-auto"
         viewBox="0 0 722 780"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
