@@ -55,8 +55,7 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg
-            className="w-6 h-6"
-            fill="none"
+            className="w-6 h-6 dark:stroke-gray-300 stroke-black"
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +79,7 @@ export default function Header() {
                   className={`inline-block px-[10px] py-2 text-lg font-normal no-underline rounded-md ${
                     activeSection === menu.id
                       ? "text-primary" // Apply primary color if in section
-                      : "text-gray-300 hover:text-[#e6d762]"
+                      : "dark:text-gray-300 text-black hover:text-[#e6d762]"
                   }  `}
                 >
                   {menu.name}
@@ -95,7 +94,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       {menuOpen && (
         <div className="lg:hidden bg-background py-2">
-          <ul className="list-none">
+          <ul className="list-none ">
             {navigation.map((menu, index) => (
               <li key={index} className="py-2 px-4">
                 <Link
@@ -104,7 +103,7 @@ export default function Header() {
                   className={`block text-lg font-normal no-underline ${
                     activeSection === menu.id
                       ? "text-primary"
-                      : "text-gray-300 hover:text-[#e6d762]"
+                      : "dark:text-gray-300 text-black hover:text-[#e6d762]"
                   }`}
                 >
                   {menu.name}

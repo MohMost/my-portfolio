@@ -46,7 +46,7 @@ function GetInTouch() {
         </li>
       </ul>
       <div className="flex flex-row gap-8 my-8">
-        <Link href="mailto:mohmost32@gmail.com">
+        <Link href="mailto:mohmost.contact@gmail.com">
           <Button>Contact me</Button>
         </Link>
       </div>

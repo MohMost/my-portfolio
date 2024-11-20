@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inconsolata, Fira_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Sidebar from "./_components/Sidebar";
+import Sidebar from "../_components/Sidebar";
+import Providers from "./providers";
 const inconsolata = Inconsolata({
   subsets: ["latin"],
   variable: "--font-inco",
@@ -23,8 +25,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -41,8 +45,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Providers locale={params.locale}>{children}</Providers>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

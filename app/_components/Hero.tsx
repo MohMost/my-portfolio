@@ -6,28 +6,33 @@ import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import InstagramIcon from "./icons/InstagramIcon";
 import { Mail } from "lucide-react";
-const Hero = () => {
+import { getI18n } from "@/locales/server";
+
+const Hero = async () => {
+  const t = await getI18n(); // Access translations for the 'banner' section
+
   return (
     <Section className="flex h-screen items-center justify-center w-full">
-      <div className="flex flex-col items-center justify-center w-full lg:w-2/3">
-        <div className="text-center lg:text-left w-full 2xl:w-3/4">
+      <div className="flex flex-col items-center justify-center w-full ">
+        <div className="text-center lg:text-left w-full ">
           <p className="text-xl w-full font-semibold tracking-wider text-secondary ">
-            Hi, my name is
+            {t("banner.text1")} {/* Hi, my name is */}
           </p>
-          <h1 className=" 2xl:text-6xl xl:text-5xl lg:text-2xl font-bold leading-snug tracking-tight  lg:leading-tight  xl:leading-tight dark:text-gray-300 text-black inconsolata-bold-title">
-            Mostefai Mohamed.
+          <h1 className="2xl:text-6xl xl:text-5xl lg:text-2xl font-bold leading-snug tracking-tight lg:leading-tight xl:leading-tight dark:text-gray-300 text-black inconsolata-bold-title">
+            {t("banner.text2")} {/* Mostefai Mohamed */}
           </h1>
-          <h1 className="2xl:text-5xl w-full xl:text-4xl lg:text-2xl text-4xl font-bold leading-snug tracking-tight  lg:leading-tight xl:leading-tight dark:text-gray-400 text-black/70 inconsolata-bold-title">
-            I build modern and intuitive web experiences
+          <h1 className="2xl:text-5xl w-full xl:text-4xl lg:text-2xl text-4xl font-bold leading-snug tracking-tight lg:leading-tight xl:leading-tight dark:text-gray-400 text-black/70 inconsolata-bold-title">
+            {t("banner.text3")}{" "}
+            {/* I build modern and intuitive web experiences */}
           </h1>
           <p className="py-5 base leading-normal text-gray-500 2xl:text-1xl xl:text-[20px] lg:text-2xl dark:text-gray-400 fira-sans">
-            I&apos;m a self-taught full-stack web developer specializing in{" "}
-            <Code>JavaScript</Code> building web apps for both business and
-            consumer use.
+            {t("banner.text4").split("JavaScript")[0]}
+            <Code>JavaScript</Code>
+            {t("banner.text4").split("JavaScript")[1]}
           </p>
         </div>
         <ul className="flex md:hidden w-full flex-row justify-center items-center gap-6 text-white">
-          <li className="  text-base">
+          <li className="text-base">
             <Link className="flex justify-center" href="/">
               <GithubIcon size={25} className="fill-gray-700 dark:fill-white" />
             </Link>
@@ -40,7 +45,7 @@ const Hero = () => {
               />
             </Link>
           </li>
-          <li className=" text-base">
+          <li className="text-base">
             <Link className="flex justify-center" href="/about">
               <InstagramIcon
                 size={25}
@@ -48,17 +53,17 @@ const Hero = () => {
               />
             </Link>
           </li>
-          <li className=" text-base">
+          <li className="text-base">
             <Link
               className="flex justify-center"
-              href="mailto:mohmost32@gmail.com"
+              href="mailto:mohmost.contact@gmail.com"
             >
-              <Mail size={25} />
+              <Mail className="text-gray-700 dark:text-white" size={25} />
             </Link>
           </li>
         </ul>
       </div>
-      <div className="hidden md:flex items-center justify-center w-full ">
+      <div className="hidden md:flex items-center justify-center w-full">
         <HeroSVG />
       </div>
     </Section>

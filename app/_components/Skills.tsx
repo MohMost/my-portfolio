@@ -30,7 +30,10 @@ import FireBaseIcon from "./icons/Firebase";
 import AstroIcon from "./icons/Astro";
 import VueJSIcon from "./icons/VueJS";
 import OpenAIIcon from "./icons/OpenAI";
-function Skills() {
+import { getI18n } from "@/locales/server";
+
+const Skills = async () => {
+  const t = await getI18n(); // Access translations for the 'skills' section
   const figmaColors = {
     green: "#09CF83",
     blue: "#19BCFE",
@@ -41,14 +44,14 @@ function Skills() {
   return (
     <Section id="skills" className="flex flex-col gap-4 my-28">
       <div className="flex flex-row justify-start items-center gap-2 w-fit">
-        <h2 className="text-xl  font-semibold tracking-wider text-secondary">
-          Skills
+        <h2 className="text-xl font-semibold tracking-wider text-secondary">
+          {t("skills.title")} {/* Skills */}
         </h2>
         <div className="md:w-[300px] w-full h-0.5 bg-secondary/20"></div>
       </div>
 
       <h3 className="dark:text-gray-400 text-gray-700 text-5xl font-bold fira-sans">
-        The big three...
+        {t("skills.subtitle")} {/* The big three... */}
       </h3>
       <div className="flex md:flex-row flex-col gap-4 my-8">
         <Card className="group flex flex-col gap-4 ">
@@ -57,19 +60,26 @@ function Skills() {
               <ReactIcon
                 width={50}
                 height={50}
-                className=" fill-gray-500 group-hover:fill-[#00D8FF]"
+                className="fill-gray-500 group-hover:fill-[#00D8FF]"
               />
             </CardTitle>
             <CardDescription className="dark:text-gray-400 text-gray-600 text-3xl dark:group-hover:text-primary/70 group-hover:text-secondary/70">
-              React
+              <span>{t("skills.skill1.name")}</span>
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="dark:text-gray-400 text-gray-700 leading-relaxed">
-              I primarily work with <Code className="text-sm">React</Code> as my
-              main framework, and I also use{" "}
-              <Code className="text-sm">Next.js</Code> with{" "}
-              <Code className="text-sm">TypeScript</Code> for full-stack apps.
+              {t("skills.skill1.description")
+                .split(/(React|Next\.js|TypeScript)/) // Utilisez "Next.js" au lieu de "NextJs"
+                .map((part, index) =>
+                  part === "React" ||
+                  part === "Next.js" ||
+                  part === "TypeScript" ? (
+                    <Code key={index}>{part}</Code>
+                  ) : (
+                    part
+                  )
+                )}
             </p>
           </CardContent>
         </Card>
@@ -79,20 +89,20 @@ function Skills() {
               <Postgres
                 width={50}
                 height={50}
-                className="fill-gray-500 group-hover:fill-[#336791] "
+                className="fill-gray-500 group-hover:fill-[#336791]"
               />
             </CardTitle>
             <CardDescription>
               <h3 className="dark:text-gray-400 text-gray-600 text-3xl dark:group-hover:text-primary/70 group-hover:text-secondary/70">
-                PostgreSQL
+                {t("skills.skill2.name")}
               </h3>
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="dark:text-gray-400 text-gray-700 leading-relaxed">
-              I use <Code className="text-sm">PostgreSQL</Code> as my go-to
-              relational database for handling complex queries and ensuring
-              reliable data storage in my projects.
+              {t("skills.skill2.description").split("PostgreSQL")[0]}
+              <Code>PostgreSQL</Code>
+              {t("skills.skill2.description").split("PostgreSQL")[1]}
             </p>
           </CardContent>
         </Card>
@@ -107,15 +117,15 @@ function Skills() {
             </CardTitle>
             <CardDescription>
               <h3 className="dark:text-gray-400 text-gray-600 text-3xl dark:group-hover:text-primary/70 group-hover:text-secondary/70">
-                Tailwind CSS
+                {t("skills.skill3.name")}
               </h3>
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="dark:text-gray-400 text-gray-700 leading-relaxed">
-              I rely on <Code className="text-sm">Tailwind CSS</Code> for
-              styling, as it allows me to quickly build responsive and modern
-              user interfaces.
+              {t("skills.skill3.description").split("Tailwind CSS")[0]}
+              <Code>Tailwind CSS</Code>
+              {t("skills.skill3.description").split("Tailwind CSS")[1]}
             </p>
           </CardContent>
         </Card>
@@ -127,7 +137,7 @@ function Skills() {
             variant={"link"}
             className="dark:text-primary text-secondary font-semibold text-lg"
           >
-            Other skills..
+            {t("skills.otherSkills")}
           </Button>
         </DrawerTrigger>
 
@@ -203,6 +213,6 @@ function Skills() {
       </Drawer>
     </Section>
   );
-}
+};
 
 export default Skills;

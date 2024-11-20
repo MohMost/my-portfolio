@@ -25,11 +25,11 @@ function Projects() {
           className=""
         >
           <div className=" 2xl:w-full lg:w-1/2  h-full">
-            <h2 className="text-left text-balance text-base text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            <h2 className="text-left text-balance text-base text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
               RubyDash
             </h2>
 
-            <p className=" 2xl:mt-4 text-left  text-base/6 text-neutral-200 ">
+            <p className=" 2xl:mt-4 text-left  text-base/6 dark:text-white text-gray-700">
               A dynamic and fully responsive blog platform that allows users to
               create, read, update, and delete blog posts, and includes user
               authentication.
@@ -74,7 +74,10 @@ function Projects() {
               </li>
               <li>
                 <Link target="_blank" href="https://rubydash.vercel.app/">
-                  <SquareArrowOutUpRight size={25} />
+                  <SquareArrowOutUpRight
+                    className="text-gray-700 dark:text-white"
+                    size={25}
+                  />
                 </Link>
               </li>
             </ul>
@@ -88,7 +91,7 @@ function Projects() {
             className="absolute hidden lg:block 2xl:w-[90%] lg:w-[50%]   filter 2xl:-bottom-20 -bottom-10 -right-10 object-contain rounded-2xl"
           />
         </WobbleCard>
-        <WobbleCard containerClassName="  col-span-1 2xl:col-span-1 lg:col-span-1  h-full lg:hover:bg-primary/70  bg-primary/70 min-h-[500px] lg:min-h-[300px] lg:grayscale-[70%] lg:hover:grayscale-0">
+        <WobbleCard containerClassName="col-span-1 2xl:col-span-1 lg:col-span-1  h-full lg:hover:bg-primary/70  bg-primary/70  lg:grayscale-[70%] lg:hover:grayscale-0">
           <Image
             src="/makeviwesmobile.png"
             width={500}
@@ -97,10 +100,10 @@ function Projects() {
             className="hidden 2xl:absolute 2xl:block h-full md:-right-10 -top-80 object-contain rounded-2xl"
           />
           <div className=" flex flex-col justify-center lg:justify-end h-full max-w-sm">
-            <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-gray-200">
+            <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
               MakeViews
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-white">
+            <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
               Make Views is a web agency that specializes in creating
               high-quality videos and helping clients grow their digital reach.
             </p>
@@ -138,7 +141,10 @@ function Projects() {
               </li>
               <li>
                 <Link target="_blank" href="https://makeviews.vercel.app/">
-                  <SquareArrowOutUpRight size={25} />
+                  <SquareArrowOutUpRight
+                    className="text-gray-700 dark:text-white"
+                    size={25}
+                  />
                 </Link>
               </li>
             </ul>
@@ -146,10 +152,10 @@ function Projects() {
         </WobbleCard>
         <WobbleCard containerClassName="group col-span-1 2xl:col-span-1 lg:col-span-2  lg:hover:bg-secondary/70 h-full bg-secondary  lg:grayscale-[70%] lg:hover:grayscale-0">
           <div className=" flex flex-col justify-start h-1/2 max-w-sm">
-            <h2 className="max-w-80  text-left text-balance text-base text-xl md:text-xl lg:text-3xl  font-semibold tracking-[-0.015em] text-white">
+            <h2 className="max-w-80  text-left text-balance text-base text-xl md:text-xl lg:text-3xl  font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
               Vanity Corp
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
               A marketing agency and i&apos;m currently working for them as a
               freelancer. I&apos;ve helped them rebuild and migrate their
               website from wordpress to Next.js.
@@ -190,7 +196,10 @@ function Projects() {
               </li>
               <li>
                 <Link target="_blank" href="https://vanitycorp.fr/">
-                  <SquareArrowOutUpRight size={25} />
+                  <SquareArrowOutUpRight
+                    className="text-gray-700 dark:text-white"
+                    size={25}
+                  />
                 </Link>
               </li>
             </ul>
