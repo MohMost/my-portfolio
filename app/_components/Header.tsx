@@ -3,18 +3,19 @@ import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import Section from "./Section";
 import Image from "next/image";
-
+import { useI18n } from "@/locales/client";
 import Link from "next/link";
 import { ModeToggle } from "@/components/ui/ModToggler";
 
 export default function Header() {
+  const t = useI18n();
   const navigation = useMemo(
     () => [
-      { name: "Skills", id: "#skills" },
-      { name: "Projects", id: "#projects" },
-      { name: "Contact", id: "#contact" },
+      { name: `${t("navbar.skills")}`, id: "#skills" },
+      { name: `${t("navbar.projects")}`, id: "#projects" },
+      { name: `${t("navbar.contact")}`, id: "#contact" },
     ],
-    []
+    [t]
   );
   const [activeSection, setActiveSection] = useState("");
   const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu toggle

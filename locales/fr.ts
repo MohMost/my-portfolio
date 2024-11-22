@@ -8,7 +8,7 @@ export default {
   },
   skills: {
     title: "Compétences",
-    subtitle: "Les trois grandes...",
+    subtitle: "J'utilise...",
     skill1: {
       name: "React",
       description:
@@ -33,19 +33,16 @@ export default {
       name: "RubyDash",
       description:
         "Une plateforme de blog dynamique et entièrement responsive qui permet aux utilisateurs de créer, lire, mettre à jour et supprimer des articles, avec authentification des utilisateurs.",
-      techUsed: ["NextJs", "MongoDB", "Prisma", "Tailwind CSS"],
     },
     project2: {
       name: "MakeViews",
       description:
         "Make Views est une agence web spécialisée dans la création de vidéos de haute qualité et l'aide à la croissance numérique des clients.",
-      techUsed: ["NextJs", "Tailwind CSS"],
     },
     project3: {
       name: "Vanity Corp",
       description:
-        "Une agence de marketing pour laquelle je travaille actuellement en tant que freelance. Je les ai aidés à reconstruire et migrer leur site web de WordPress à Next.js.",
-      techUsed: ["NextJs", "Tailwind CSS", "PostgreSQL"],
+        "Une agence de marketing pour laquelle je travaille actuellement en tant que freelance. Je les ai aidés à migrer leur site web de WordPress à Next.js.",
     },
   },
   contact: {
@@ -54,6 +51,11 @@ export default {
     button: "Contactez-moi",
   },
   footer: {
-    text: "Conçu & Développé par Mostefai Mohamed",
+    text: "Conçu & Développé par",
+  },
+  navbar: {
+    skills: "Competences",
+    projects: "Projets",
+    contact: "Contact",
   },
 } as const;

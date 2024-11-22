@@ -7,17 +7,19 @@ import GithubIcon from "./icons/GithubIcon";
 import { SquareArrowOutUpRight } from "lucide-react";
 import FigmaIcon from "./icons/Figma";
 import Code from "@/components/ui/Code";
-function Projects() {
+import { getI18n } from "@/locales/server";
+async function Projects() {
+  const t = await getI18n();
   return (
     <Section id="projects" className="flex flex-col gap-4 my-28">
       <div className="flex flex-row justify-start items-center gap-2 w-fit">
         <h2 className="text-xl  font-semibold tracking-wider text-secondary">
-          Projects
+          {t("projects.title")}
         </h2>
         <div className="md:w-[300px] w-full h-0.5 bg-secondary/20"></div>
       </div>
       <h3 className="dark:text-gray-400 text-gray-700 text-5xl font-bold fira-sans">
-        My projects...
+        {t("projects.subtitle")}
       </h3>
       <div className="grid grid-cols-1 2xl:grid-cols-4 lg:grid-cols-3  gap-4 2xl:h-[600px] my-8 w-full">
         <WobbleCard
@@ -26,13 +28,11 @@ function Projects() {
         >
           <div className=" 2xl:w-full lg:w-1/2  h-full">
             <h2 className="text-left text-balance text-base text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
-              RubyDash
+              {t("projects.project1.name")}
             </h2>
 
             <p className=" 2xl:mt-4 text-left  text-base/6 dark:text-white text-gray-700">
-              A dynamic and fully responsive blog platform that allows users to
-              create, read, update, and delete blog posts, and includes user
-              authentication.
+              {t("projects.project1.description")}
             </p>
             <ul className="flex flex-row gap-2  flex-wrap 2xl:mt-4 text-left  text-base/6  ">
               <li>
@@ -101,11 +101,10 @@ function Projects() {
           />
           <div className=" flex flex-col justify-center lg:justify-end h-full max-w-sm">
             <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
-              MakeViews
+              {t("projects.project2.name")}
             </h2>
             <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
-              Make Views is a web agency that specializes in creating
-              high-quality videos and helping clients grow their digital reach.
+              {t("projects.project2.description")}
             </p>
             <ul className="flex flex-row gap-2 mt-4 text-left  flex-wrap text-base/6  ">
               <li>
@@ -153,12 +152,10 @@ function Projects() {
         <WobbleCard containerClassName="group col-span-1 2xl:col-span-1 lg:col-span-2  lg:hover:bg-secondary/70 h-full bg-secondary  lg:grayscale-[70%] lg:hover:grayscale-0">
           <div className=" flex flex-col justify-start h-1/2 max-w-sm">
             <h2 className="max-w-80  text-left text-balance text-base text-xl md:text-xl lg:text-3xl  font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
-              Vanity Corp
+              {t("projects.project3.name")}
             </h2>
             <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
-              A marketing agency and i&apos;m currently working for them as a
-              freelancer. I&apos;ve helped them rebuild and migrate their
-              website from wordpress to Next.js.
+              {t("projects.project3.description")}
             </p>
             <ul className="flex flex-row gap-2 mt-2  flex-wrap text-left  text-base/6  ">
               <li>

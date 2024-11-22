@@ -70,7 +70,7 @@ const Skills = async () => {
           <CardContent>
             <p className="dark:text-gray-400 text-gray-700 leading-relaxed">
               {t("skills.skill1.description")
-                .split(/(React|Next\.js|TypeScript)/) // Utilisez "Next.js" au lieu de "NextJs"
+                .split(/(React|Next\.js|TypeScript)/)
                 .map((part, index) =>
                   part === "React" ||
                   part === "Next.js" ||

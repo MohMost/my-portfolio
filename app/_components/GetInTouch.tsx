@@ -5,8 +5,10 @@ import Link from "next/link";
 import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import InstagramIcon from "./icons/InstagramIcon";
+import { getI18n } from "@/locales/server";
 
-function GetInTouch() {
+async function GetInTouch() {
+  const t = await getI18n();
   const figmaColors = {
     green: "#09CF83",
     blue: "#19BCFE",
@@ -18,12 +20,13 @@ function GetInTouch() {
     <Section id="contact" className="flex flex-col  items-center gap-4 my-28">
       <div className="flex flex-row justify-start items-center gap-2 w-fit">
         <h2 className="text-xl  font-semibold tracking-wider text-secondary">
-          Contact
+          {" "}
+          {t("contact.title")}{" "}
         </h2>
       </div>
 
       <h3 className="dark:text-gray-400 text-center text-gray-700 text-5xl font-bold fira-sans">
-        Get in touch
+        {t("contact.subtitle")}
       </h3>
       <ul className="flex md:hidden w-full flex-row justify-center items-center gap-6 text-white">
         <li className="  text-base">
@@ -47,7 +50,7 @@ function GetInTouch() {
       </ul>
       <div className="flex flex-row gap-8 my-8">
         <Link href="mailto:mohmost.contact@gmail.com">
-          <Button>Contact me</Button>
+          <Button> {t("contact.button")}</Button>
         </Link>
       </div>
     </Section>

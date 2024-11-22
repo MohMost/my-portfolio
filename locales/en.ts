@@ -1,3 +1,5 @@
+import Skills from "@/app/_components/Skills";
+
 export default {
   banner: {
     text1: "Hi, my name is",
@@ -7,7 +9,7 @@ export default {
   },
   skills: {
     title: "Skills",
-    subtitle: "The big three...",
+    subtitle: "I use...",
     skill1: {
       name: "React",
       description:
@@ -32,19 +34,16 @@ export default {
       name: "RubyDash",
       description:
         "A dynamic and fully responsive blog platform that allows users to create, read, update, and delete blog posts, and includes user authentication.",
-      techUsed: ["NextJs", "MongoDB", "Prisma", "Tailwind CSS"],
     },
     project2: {
       name: "MakeViews",
       description:
         "Make Views is a web agency that specializes in creating high-quality videos and helping clients grow their digital reach.",
-      techUsed: ["NextJs", "Tailwind CSS"],
     },
     project3: {
       name: "Vanity Corp",
       description:
         "A marketing agency and I'm currently working for them as a freelancer. I've helped them rebuild and migrate their website from WordPress to Next.js.",
-      techUsed: ["NextJs", "Tailwind CSS", "PostgreSQL"],
     },
   },
   contact: {
@@ -53,6 +52,11 @@ export default {
     button: "Contact me",
   },
   footer: {
-    text: "Designed & Built by Mostefai Mohamed",
+    text: "Designed & Built by",
+  },
+  navbar: {
+    skills: "Skills",
+    projects: "Projects",
+    contact: "Contact",
   },
 } as const;
