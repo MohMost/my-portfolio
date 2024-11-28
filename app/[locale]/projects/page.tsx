@@ -5,7 +5,7 @@ import Header from "@/app/_components/Header";
 import Sidebar from "@/app/_components/Sidebar";
 import Footer from "@/app/_components/Footer";
 
-export function page() {
+export default function page() {
   return (
     <>
       <Header />
@@ -14,5 +14,3 @@ export function page() {
     </>
   );
 }
-
-export default page;
