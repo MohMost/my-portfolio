@@ -4,8 +4,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Sidebar from "../_components/Sidebar";
+
 import Providers from "./providers";
+import Footer from "../_components/Footer";
+
 const inconsolata = Inconsolata({
   subsets: ["latin"],
   variable: "--font-inco",
@@ -36,18 +38,21 @@ export default function RootLayout({
         className={cn(
           inconsolata.variable,
           firaSans.variable,
-          "flex justify-between inconsolata  bg-background "
+          "flex flex-col inconsolata  bg-background "
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Providers locale={params.locale}>{children}</Providers>
-        </ThemeProvider>
-        <Analytics />
+        <main>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Providers locale={params.locale}>{children}</Providers>
+          </ThemeProvider>
+          <Analytics />
+        </main>
+        <Footer />
       </body>
     </html>
   );

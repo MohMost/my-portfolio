@@ -45,6 +45,7 @@ export default {
       description:
         "A marketing agency and I'm currently working for them as a freelancer. I've helped them rebuild and migrate their website from WordPress to Next.js.",
     },
+    moreProjects: "More projects...",
   },
   contact: {
     title: "Contact",

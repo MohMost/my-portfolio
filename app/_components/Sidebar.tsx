@@ -6,7 +6,7 @@ import InstagramIcon from "./icons/InstagramIcon";
 
 function Sidebar() {
   return (
-    <div className="md:flex hidden fixed z-10 right-auto flex-col bottom-0 left-0 px-4 lg:mx-8 gap-8 justify-between w-[60px] items-center">
+    <div className="md:flex hidden fixed z-[200] right-auto flex-col bottom-0 left-0 px-4 lg:mx-8 gap-8 justify-between w-[60px] items-center">
       <ul className="flex w-full flex-col gap-6 text-white">
         <li className=" w-full text-base">
           <Link
