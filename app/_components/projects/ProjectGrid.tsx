@@ -11,6 +11,12 @@ import Nextjs from "../icons/Nextjs";
 import Tailwind from "../icons/Tailwind";
 import FireBaseIcon from "../icons/Firebase";
 import WoocommerceIcon from "../icons/Woocommerce";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 interface ProjectsTypes {
   id: string;
   img: string;
@@ -19,7 +25,11 @@ interface ProjectsTypes {
   link: string;
   github?: ReactElement;
   githubLink?: string;
-  technologies?: ReactElement[];
+  technologies?: Technologies[];
+}
+export interface Technologies {
+  icon: ReactElement;
+  name: string;
 }
 const projects: ProjectsTypes[] = [
   {
@@ -29,8 +39,15 @@ const projects: ProjectsTypes[] = [
     des: "",
     link: "https://piatto-pizza.com/",
     technologies: [
-      <WordpressIcon size={25} className="fill-white" key={1} />,
-      <WoocommerceIcon size={25} className="fill-white" key={2} />,
+      {
+        name: "Wordpress",
+        icon: <WordpressIcon size={25} className="fill-white" />,
+      },
+
+      {
+        name: "Woocommerce",
+        icon: <WoocommerceIcon size={25} className="fill-white" />,
+      },
     ],
   },
   {
@@ -42,9 +59,18 @@ const projects: ProjectsTypes[] = [
     github: <GithubIcon size={25} className="fill-white" />,
     githubLink: "https://github.com/MohMost/melobellus-nextjs",
     technologies: [
-      <Nextjs size={25} className="fill-white" key={1} />,
-      <Tailwind size={25} className="fill-white" key={2} />,
-      <FireBaseIcon size={25} className="fill-white" key={3} />,
+      {
+        name: "Nextjs",
+        icon: <Nextjs size={25} className="fill-white" key={1} />,
+      },
+      {
+        name: "Tailwind",
+        icon: <Tailwind size={25} className="fill-white" key={2} />,
+      },
+      {
+        name: "Firebase",
+        icon: <FireBaseIcon size={25} className="fill-white" key={3} />,
+      },
     ],
   },
   {
@@ -53,7 +79,12 @@ const projects: ProjectsTypes[] = [
     title: "Legal Euro Corp",
     des: "",
     link: "https://legaleurocorp.com/",
-    technologies: [<WordpressIcon size={25} className="fill-white" key={1} />],
+    technologies: [
+      {
+        name: "Wordpress",
+        icon: <WordpressIcon size={25} className="fill-white" />,
+      },
+    ],
   },
   {
     id: "04",
@@ -61,7 +92,12 @@ const projects: ProjectsTypes[] = [
     title: "Madiaponews",
     des: "",
     link: "https://madiasponews.com/",
-    technologies: [<WordpressIcon size={25} className="fill-white" key={1} />],
+    technologies: [
+      {
+        name: "Wordpress",
+        icon: <WordpressIcon size={25} className="fill-white" />,
+      },
+    ],
   },
 ];
 
@@ -106,13 +142,19 @@ export default function index() {
                       {project.title}
                     </h3>
 
-                    {project.technologies?.map((tech, index) => (
-                      <div
-                        key={index}
-                        className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
-                      >
-                        {tech}
-                      </div>
+                    {project.technologies?.map((tech: Technologies, index) => (
+                      <TooltipProvider key={index}>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <div className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black">
+                              {tech.icon}
+                            </div>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>{tech.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     ))}
                   </div>
                   <div className="flex gap-2">
