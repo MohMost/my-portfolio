@@ -48,7 +48,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 py-4 bg-background w-full z-[100]">
       <div className="flex items-center justify-between gap-4 px-4 lg:px-8">
-        <Image src="/Group 1.png" width={64} height={64} alt="logo" />
+        <Link href="/">
+          <Image src="/Group 1.png" width={64} height={64} alt="logo" />
+        </Link>
         <div className="flex-1" />
         {/* Mobile Hamburger Menu */}
         <button

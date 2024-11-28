@@ -8,14 +8,13 @@ import GetInTouch from "../_components/GetInTouch";
 import Footer from "../_components/Footer";
 export default function Home() {
   return (
-    <main className="w-full ">
+    <>
       <Header />
       <Sidebar />
       <Hero />
       <Skills />
       <Projects />
       <GetInTouch />
-      <Footer />
-    </main>
+    </>
   );
 }

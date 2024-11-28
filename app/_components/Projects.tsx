@@ -8,6 +8,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 import FigmaIcon from "./icons/Figma";
 import Code from "@/components/ui/Code";
 import { getI18n } from "@/locales/server";
+import { Button } from "@/components/ui/button";
 async function Projects() {
   const t = await getI18n();
   return (
@@ -210,6 +211,12 @@ async function Projects() {
           />
         </WobbleCard>
       </div>
+      <Button
+        variant={"link"}
+        className="dark:text-primary text-secondary font-semibold text-lg"
+      >
+        <Link href="/projects">{t("projects.moreProjects")}</Link>
+      </Button>
     </Section>
   );
 }
