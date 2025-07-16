@@ -73,12 +73,13 @@ const projects: ProjectsTypes[] = [
       },
     ],
   },
+
   {
     id: "03",
-    img: "/legaleurocorp.webp",
-    title: "Legal Euro Corp",
+    img: "/giveong.webp",
+    title: "GIVE ONG",
     des: "",
-    link: "https://legaleurocorp.com/",
+    link: "https://give.kesug.com/",
     technologies: [
       {
         name: "Wordpress",
@@ -88,10 +89,10 @@ const projects: ProjectsTypes[] = [
   },
   {
     id: "04",
-    img: "/madiaponews.webp",
-    title: "Madiaponews",
+    img: "/legaleurocorp.webp",
+    title: "Legal Euro Corp",
     des: "",
-    link: "https://madiasponews.com/",
+    link: "https://legaleurocorp.com/",
     technologies: [
       {
         name: "Wordpress",
