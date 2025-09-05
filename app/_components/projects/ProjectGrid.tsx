@@ -100,6 +100,32 @@ const projects: ProjectsTypes[] = [
       },
     ],
   },
+  {
+    id: "05",
+    img: "/exosquelette.webp",
+    title: "Exosquelette",
+    des: "",
+    link: "https://href.li/?https://exosquelette.fr/",
+    technologies: [
+      {
+        name: "Wordpress",
+        icon: <WordpressIcon size={25} className="fill-white" />,
+      },
+    ],
+  },
+  {
+    id: "06",
+    img: "/lukaskullig.webp",
+    title: "Lukas kullig - e-commerce Expert",
+    des: "",
+    link: "https://href.li/?https://lukaskulig.fr/",
+    technologies: [
+      {
+        name: "Wordpress",
+        icon: <WordpressIcon size={25} className="fill-white" />,
+      },
+    ],
+  },
 ];
 
 export default function index() {
