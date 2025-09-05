@@ -79,7 +79,7 @@ const projects: ProjectsTypes[] = [
     img: "/giveong.webp",
     title: "GIVE ONG",
     des: "",
-    link: "https://give.kesug.com/",
+    link: "https://give-ong.net/",
     technologies: [
       {
         name: "Wordpress",
