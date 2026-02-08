@@ -10,7 +10,6 @@ import { BackgroundGradient } from "@/components/ui/gradient";
 export default function Home() {
   return (
     <>
-      <BackgroundGradient />
       <Header />
       <Sidebar />
       <Hero />
