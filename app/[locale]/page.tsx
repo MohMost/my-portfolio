@@ -6,9 +6,11 @@ import Skills from "../_components/Skills";
 import Projects from "../_components/Projects";
 import GetInTouch from "../_components/GetInTouch";
 import Footer from "../_components/Footer";
+import { BackgroundGradient } from "@/components/ui/gradient";
 export default function Home() {
   return (
     <>
+      <BackgroundGradient />
       <Header />
       <Sidebar />
       <Hero />
