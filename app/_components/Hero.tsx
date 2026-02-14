@@ -18,7 +18,7 @@ const Hero = async () => {
           <p className="text-xl w-full font-semibold tracking-wider text-secondary ">
             {t("banner.text1")} {/* Hi, my name is */}
           </p>
-          <h1 className="2xl:text-6xl xl:text-5xl lg:text-2xl font-bold leading-snug tracking-tight lg:leading-tight xl:leading-tight dark:text-gray-300 text-black inconsolata-bold-title">
+          <h1 className="2xl:text-6xl xl:text-5xl lg:text-2xl font-bold leading-snug tracking-tight lg:leading-tight xl:leading-tight dark:text-gray-300 text-black inconsolata-bold-title opacity-75">
             {t("banner.text2")} {/* Mostefai Mohamed */}
           </h1>
           <h1 className="2xl:text-5xl w-full xl:text-4xl lg:text-2xl text-4xl font-bold leading-snug tracking-tight lg:leading-tight xl:leading-tight dark:text-gray-400 text-black/70 inconsolata-bold-title">

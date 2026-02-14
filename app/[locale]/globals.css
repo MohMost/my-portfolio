@@ -8,7 +8,6 @@
     --foreground: 224 71.4% 4.1%;
     --muted: 220 14.3% 95.9%;
     --muted-foreground: 220 8.9% 46.1%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
@@ -47,6 +46,14 @@
     --destructive: 10 90% 57%;
     --destructive-foreground: 0 0% 100%;
     --ring: 44 100% 71%;
+  }
+  /* Add this new rule for background image */
+  .light-bg {
+    background-image: url("/noise-dark.png");
+  }
+
+  .dark-bg {
+    background-image: url("/noise-light.png");
   }
 }
 

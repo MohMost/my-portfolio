@@ -38,7 +38,7 @@ export default function RootLayout({
         className={cn(
           inconsolata.variable,
           firaSans.variable,
-          "flex flex-col inconsolata  bg-background "
+          "flex flex-col inconsolata dark:dark-bg light-bg bg-background-image bg-background",
         )}
       >
         <main>
