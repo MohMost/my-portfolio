@@ -4,7 +4,7 @@ export default {
     text2: "Mostefai Mohamed.",
     text3: "Je crée des expériences web modernes et intuitives",
     text4:
-      "Je suis un développeur web full-stack autodidacte spécialisé en JavaScript, créant des applications web pour les entreprises et les utilisateurs.",
+      "Je suis un développeur web Frontend autodidacte spécialisé en JavaScript, créant des applications web pour les entreprises et les utilisateurs.",
   },
   skills: {
     title: "Compétences",

@@ -5,7 +5,7 @@ export default {
     text1: "Hi, my name is",
     text2: "Mostefai Mohamed.",
     text3: "I build modern and intuitive web experiences",
-    text4: `I'm a self-taught full-stack web developer specializing in JavaScript building web apps for both business and consumer use.`,
+    text4: `I'm a self-taught Frontend web developer specializing in JavaScript building web apps for both business and consumer use.`,
   },
   skills: {
     title: "Skills",
