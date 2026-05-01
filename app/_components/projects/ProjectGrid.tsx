@@ -6,6 +6,7 @@ import { MoveUpRight } from "lucide-react";
 import Section from "../Section";
 import Link from "next/link";
 import GithubIcon from "../icons/GithubIcon";
+import FigmaIcon from "../icons/Figma";
 import WordpressIcon from "../icons/Wordpress";
 import Nextjs from "../icons/Nextjs";
 import Tailwind from "../icons/Tailwind";
@@ -17,6 +18,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import AstroIcon from "../icons/Astro";
+import ReactIcon from "../icons/React";
+import MongoDBIcon from "../icons/MongoDB";
 interface ProjectsTypes {
   id: string;
   img: string;
@@ -24,7 +28,9 @@ interface ProjectsTypes {
   des: string;
   link: string;
   github?: ReactElement;
+  figma?: ReactElement;
   githubLink?: string;
+  figmaLink?: string;
   technologies?: Technologies[];
 }
 export interface Technologies {
@@ -34,24 +40,81 @@ export interface Technologies {
 const projects: ProjectsTypes[] = [
   {
     id: "01",
-    img: "/piattopizza.webp",
-    title: "Paitto Pizza",
+    img: "/cemika.png",
+    title: "Cemika cuisine",
     des: "",
-    link: "https://piatto-pizza.com/",
+    link: "https://cemika-cuisine.com/",
+    figma: <FigmaIcon size={25} className="fill-white" />,
+    figmaLink:
+      "https://www.figma.com/design/CQVZUQWIPNJNIPjOjuVVlK/CemikaV2?node-id=521-34802&t=fSJw8TpILSYLBr06-0",
     technologies: [
       {
         name: "Wordpress",
         icon: <WordpressIcon size={25} className="fill-white" />,
       },
-
-      {
-        name: "Woocommerce",
-        icon: <WoocommerceIcon size={25} className="fill-white" />,
-      },
     ],
   },
   {
     id: "02",
+    img: "/zidna.png",
+    title: "Zidna Digital",
+    des: "",
+    link: "https://href.li/?https://zidnadigital.com/",
+    technologies: [
+      {
+        name: "React",
+        icon: <ReactIcon size={25} className="fill-white" />,
+      },
+      {
+        name: "Tailwind",
+        icon: <Tailwind size={25} className="fill-white" />,
+      },
+    ],
+  },
+  {
+    id: "03",
+    img: "/automatisons.png",
+    title: "Automatisons",
+    des: "",
+    github: <GithubIcon size={25} className="fill-white" />,
+    githubLink: "https://github.com/LK-Organization/automatisations",
+    link: "https://href.li/?https://www.automatisons.fr/",
+    technologies: [
+      {
+        name: "Astro",
+        icon: <AstroIcon size={25} className="fill-white" />,
+      },
+      {
+        name: "React",
+        icon: <ReactIcon size={25} className="fill-white" />,
+      },
+      {
+        name: "Tailwind",
+        icon: <Tailwind size={25} className="fill-white" />,
+      },
+    ],
+  },
+  {
+    id: "04",
+    img: "/vanitycorp.webp",
+    title: "Vanity Corp",
+    des: "",
+    github: <GithubIcon size={25} className="fill-white" />,
+    githubLink: "https://github.com/Vanity-Corp/vanity-corp-site",
+    link: "https://www.vanitycorp.fr/",
+    technologies: [
+      {
+        name: "Nextjs",
+        icon: <Nextjs size={25} className="fill-white" />,
+      },
+      {
+        name: "Tailwind",
+        icon: <Tailwind size={25} className="fill-white" />,
+      },
+    ],
+  },
+  {
+    id: "05",
     img: "/melobellus.webp",
     title: "Melobellus",
     des: "",
@@ -73,9 +136,8 @@ const projects: ProjectsTypes[] = [
       },
     ],
   },
-
   {
-    id: "03",
+    id: "06",
     img: "/giveong.webp",
     title: "GIVE ONG",
     des: "",
@@ -88,7 +150,7 @@ const projects: ProjectsTypes[] = [
     ],
   },
   {
-    id: "04",
+    id: "07",
     img: "/legaleurocorp.webp",
     title: "Legal Euro Corp",
     des: "",
@@ -101,7 +163,7 @@ const projects: ProjectsTypes[] = [
     ],
   },
   {
-    id: "05",
+    id: "08",
     img: "/exosquelette.webp",
     title: "Exosquelette",
     des: "",
@@ -114,15 +176,47 @@ const projects: ProjectsTypes[] = [
     ],
   },
   {
-    id: "06",
-    img: "/lukaskullig.webp",
-    title: "Lukas kullig - e-commerce Expert",
+    id: "09",
+    img: "/rubydash.webp",
+    title: "Rubydash",
     des: "",
-    link: "https://href.li/?https://lukaskulig.fr/",
+    github: <GithubIcon size={25} className="fill-white" />,
+    githubLink: "https://github.com/MohMost/blog-project",
+    figma: <FigmaIcon size={25} className="fill-white" />,
+    figmaLink:
+      "https://www.figma.com/design/0WNWtTuWUMV4wVDMlOWUo2/RubyDash-%7C-home-page?node-id=0-1&t=tHwSqPFX8sPCkqqg-1",
+    link: "https://rubydash.vercel.app/",
     technologies: [
       {
-        name: "Wordpress",
-        icon: <WordpressIcon size={25} className="fill-white" />,
+        name: "Nextjs",
+        icon: <Nextjs size={25} className="fill-white" />,
+      },
+      {
+        name: "Tailwind",
+        icon: <Tailwind size={25} className="fill-white" />,
+      },
+      {
+        name: "MongoDB",
+        icon: <MongoDBIcon size={25} className="fill-white" />,
+      },
+    ],
+  },
+  {
+    id: "10",
+    img: "/MakeViews.webp",
+    title: "MakeViews",
+    des: "",
+    github: <GithubIcon size={25} className="fill-white" />,
+    githubLink: "https://github.com/Vanity-Corp/vanity-corp-site",
+    link: "https://www.vanitycorp.fr/",
+    technologies: [
+      {
+        name: "Nextjs",
+        icon: <Nextjs size={25} className="fill-white" />,
+      },
+      {
+        name: "Tailwind",
+        icon: <Tailwind size={25} className="fill-white" />,
       },
     ],
   },
@@ -159,7 +253,7 @@ export default function index() {
                     alt={"image"}
                     height={600}
                     width={1200}
-                    className="h-full w-full object-cover rounded-xl"
+                    className="h-full w-full object-cover object-left-top rounded-xl"
                   />
                 </div>
                 <div className="absolute lg:bottom-2 bottom-0 text-black w-full p-4 flex justify-between items-center">
@@ -187,14 +281,22 @@ export default function index() {
                   <div className="flex gap-2">
                     {project.github && (
                       <Link
-                        href={project.link}
+                        href={project.githubLink}
                         className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
                         target="_blank"
                       >
                         {project.github}
                       </Link>
                     )}
-
+                    {project.figma && (
+                      <Link
+                        href={project.figmaLink}
+                        className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
+                        target="_blank"
+                      >
+                        {project.figma}
+                      </Link>
+                    )}
                     <Link
                       href={project.link}
                       className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
