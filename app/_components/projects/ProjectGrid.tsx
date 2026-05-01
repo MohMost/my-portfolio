@@ -207,8 +207,11 @@ const projects: ProjectsTypes[] = [
     title: "MakeViews",
     des: "",
     github: <GithubIcon size={25} className="fill-white" />,
-    githubLink: "https://github.com/Vanity-Corp/vanity-corp-site",
-    link: "https://www.vanitycorp.fr/",
+    githubLink: "https://github.com/MohMost/make-views",
+    figma: <FigmaIcon size={25} className="fill-white" />,
+    figmaLink:
+      "https://www.figma.com/design/nQy5qQoNlJBFH7bSyNoQOj/Portfolio-website-for-video-editors-(Community)?node-id=0-1&t=XgqFM0ghUKBFu4XC-1",
+    link: "https://makeviews.vercel.app/",
     technologies: [
       {
         name: "Nextjs",
@@ -279,7 +282,7 @@ export default function index() {
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    {project.github && (
+                    {project.github && project.githubLink && (
                       <Link
                         href={project.githubLink}
                         className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
@@ -288,7 +291,7 @@ export default function index() {
                         {project.github}
                       </Link>
                     )}
-                    {project.figma && (
+                    {project.figma && project.figmaLink && (
                       <Link
                         href={project.figmaLink}
                         className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
@@ -297,13 +300,15 @@ export default function index() {
                         {project.figma}
                       </Link>
                     )}
-                    <Link
-                      href={project.link}
-                      className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
-                      target="_blank"
-                    >
-                      <MoveUpRight />
-                    </Link>
+                    {project.link && (
+                      <Link
+                        href={project.link}
+                        className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
+                        target="_blank"
+                      >
+                        <MoveUpRight />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </motion.article>
