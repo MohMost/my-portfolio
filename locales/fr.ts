@@ -1,62 +1,123 @@
 export default {
   banner: {
-    text1: "Bonjour, je m'appelle",
-    text2: "Mostefai Mohamed.",
-    text3: "Je crée des expériences web modernes et intuitives",
+    text1: "Agence web orientée prospection",
+    text2: "Transformez votre site en machine à rendez-vous.",
+    text3: "Sites vitrines, e-commerce et applications web pour PME ambitieuses.",
     text4:
-      "Je suis un développeur web full-stack autodidacte spécialisé en JavaScript, créant des applications web pour les entreprises et les utilisateurs.",
+      "Prospecta Studio accompagne les entreprises locales avec une offre simple, un delivery technique solide et une méthode commerciale pensée pour générer des opportunités rapidement.",
+    primaryCta: "Planifier un diagnostic",
+    secondaryCta: "Voir les tarifs",
+    stat1: "contacts ciblés par jour",
+    stat2: "pour lancer la vitrine",
+    stat3: "senior, junior, commercial",
+    panelTitle: "Votre tunnel d'acquisition",
+    card1Title: "Prospection multicanale",
+    card1Body: "LinkedIn, emails à froid, appels et réseau local pour alimenter le pipeline.",
+    card2Title: "Rendez-vous qualifiés",
+    card2Body: "Une promesse claire, un argumentaire court et des pages conçues pour convertir.",
+    card3Title: "Livraison maîtrisée",
+    card3Body: "Un senior pilote les sujets complexes, un junior assure support, intégration et maintenance.",
   },
   skills: {
-    title: "Compétences",
-    subtitle: "J'utilise...",
+    title: "Une offre volontairement simple",
+    subtitle: "Services",
+    intro:
+      "Au lieu de vendre tout et n'importe quoi, nous concentrons l'agence sur quatre livrables faciles à comprendre, à chiffrer et à vendre.",
     skill1: {
-      name: "React",
+      name: "Sites vitrines pour PME",
       description:
-        "Je travaille principalement avec React comme framework principal, et j'utilise également Next.js avec TypeScript pour des applications full-stack.",
+        "Un site moderne, rapide et crédible pour présenter l'entreprise, rassurer les prospects et déclencher des demandes de contact.",
     },
     skill2: {
-      name: "PostgreSQL",
+      name: "Sites e-commerce",
       description:
-        "J'utilise PostgreSQL comme base de données relationnelle pour gérer des requêtes complexes et assurer une gestion fiable des données dans mes projets.",
+        "Une boutique claire avec catalogue, paiements sécurisés, pages produits et bases d'analytics pour lancer ou structurer la vente en ligne.",
     },
     skill3: {
-      name: "Tailwind CSS",
+      name: "Applications web sur mesure",
       description:
-        "J'utilise Tailwind CSS pour le style, car il me permet de créer rapidement des interfaces utilisateurs réactives et modernes.",
+        "Des outils métier pour automatiser un processus, centraliser des données ou créer un portail client avec une livraison technique senior.",
     },
-    otherSkills: "Autres compétences..",
+    skill4: {
+      name: "Applications mobiles légères",
+      description:
+        "Des expériences mobiles ciblées pour valider une idée, accompagner un service existant ou créer un premier MVP.",
+    },
+    otherSkills: "Méthode commerciale, niche et maintenance",
   },
   projects: {
-    title: "Projets",
-    subtitle: "Mes projets...",
+    title: "Portfolio de démonstration",
+    subtitle: "Cas réalistes",
+    intro:
+      "Pour démarrer sans attendre les premiers clients, la vitrine présente des projets fictifs mais crédibles, chacun pensé pour une niche facile à prospecter.",
     project1: {
-      name: "RubyDash",
+      name: "Restaurant local",
       description:
-        "Une plateforme de blog dynamique et entièrement responsive qui permet aux utilisateurs de créer, lire, mettre à jour et supprimer des articles, avec authentification des utilisateurs.",
+        "Site vitrine avec menu, réservations, avis clients et boutons d'appel pour convertir les recherches locales en réservations.",
     },
     project2: {
-      name: "MakeViews",
+      name: "Agence immobilière",
       description:
-        "Make Views est une agence web spécialisée dans la création de vidéos de haute qualité et l'aide à la croissance numérique des clients.",
+        "Catalogue de biens, formulaires qualifiés et pages quartiers pour capter des vendeurs et acheteurs mieux segmentés.",
     },
     project3: {
-      name: "Vanity Corp",
+      name: "Cabinet dentaire",
       description:
-        "Une agence de marketing pour laquelle je travaille actuellement en tant que freelance. Je les ai aidés à migrer leur site web de WordPress à Next.js.",
+        "Refonte rassurante avec services, prise de rendez-vous et SEO local pour augmenter les demandes entrantes.",
     },
-    moreProjects: "Plus de projets...",
+    project4: {
+      name: "Salle de sport",
+      description:
+        "Landing page d'abonnement avec offre d'essai, planning, coachs et suivi des leads depuis les campagnes locales.",
+    },
+    moreProjects: "Comparer les offres",
+  },
+
+  team: {
+    title: "L'équipe qui livre et qui prospecte",
+    subtitle: "Équipe",
+    intro:
+      "Une petite équipe complémentaire : développement web, IA, cybersécurité et prospection commerciale pour transformer les idées en contrats signés.",
+    member1: {
+      role: "Développeur web & applications",
+      description:
+        "Mohamed conçoit des sites, plateformes et applications web avec plus de 5 ans d'expérience en livraison produit.",
+    },
+    member2: {
+      role: "Experte IA & cybersécurité",
+      description:
+        "Tinhinan, aussi connue sous le pseudo 50ulR3AP3R, apporte l'expertise IA, automatisation et sécurité pour des projets plus robustes.",
+    },
+    member3: {
+      role: "Commercial / prospection",
+      description:
+        "Farinas pilote la prospection, les premiers échanges et le suivi commercial pour créer un flux régulier de rendez-vous.",
+    },
+    imageNote:
+      "Images prêtes à ajouter : déposez vos photos dans /public/team et renseignez le chemin dans le tableau teamMembers du composant Team.",
   },
   contact: {
-    title: "Contact",
-    subtitle: "Entrer en contact",
-    button: "Contactez-moi",
+    title: "Prêt à lancer la prospection ?",
+    subtitle: "Plan 30 jours",
+    body:
+      "Dites-nous votre niche, votre budget et votre objectif. Nous cadrons l'offre, préparons la vitrine et lançons les premiers messages commerciaux.",
+    button: "Envoyer un email",
+    callButton: "Appeler l'agence",
+    planTitle: "Feuille de route concrète",
+    step1: "Choisir le nom, formaliser l'offre et mettre la vitrine en ligne.",
+    step2: "Créer 3 projets portfolio réalistes et préparer l'argumentaire commercial.",
+    step3: "Contacter 300 prospects via LinkedIn, email, téléphone et réseau local.",
+    step4: "Obtenir les premiers rendez-vous, envoyer les devis et signer le premier client.",
   },
   footer: {
-    text: "Conçu & Développé par",
+    text: "Agence conçue pour la prospection par ",
   },
   navbar: {
-    skills: "Competences",
-    projects: "Projets",
+    services: "Offres",
+    portfolio: "Portfolio",
+    team: "Équipe",
+    pricing: "Tarifs",
     contact: "Contact",
+    cta: "Diagnostic gratuit",
   },
 } as const;

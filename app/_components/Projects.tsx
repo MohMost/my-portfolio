@@ -1,222 +1,64 @@
-import React from "react";
-import Section from "./Section";
-import { WobbleCard } from "@/components/ui/wobble-card";
-import Image from "next/image";
 import Link from "next/link";
-import GithubIcon from "./icons/GithubIcon";
-import { SquareArrowOutUpRight } from "lucide-react";
-import FigmaIcon from "./icons/Figma";
-import Code from "@/components/ui/Code";
-import { getI18n } from "@/locales/server";
+import { ArrowRight, Dumbbell, Home, Stethoscope, Utensils } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { getCurrentLocale, getI18n } from "@/locales/server";
+import Section from "./Section";
+
+const projects = [
+  { icon: Utensils, titleKey: "projects.project1.name", descriptionKey: "projects.project1.description" },
+  { icon: Home, titleKey: "projects.project2.name", descriptionKey: "projects.project2.description" },
+  { icon: Stethoscope, titleKey: "projects.project3.name", descriptionKey: "projects.project3.description" },
+  { icon: Dumbbell, titleKey: "projects.project4.name", descriptionKey: "projects.project4.description" },
+] as const;
+
 async function Projects() {
   const t = await getI18n();
+  const locale = getCurrentLocale();
+
   return (
-    <Section id="projects" className="flex flex-col gap-4 my-28">
-      <div className="flex flex-row justify-start items-center gap-2 w-fit">
-        <h2 className="text-xl  font-semibold tracking-wider text-secondary">
-          {t("projects.title")}
-        </h2>
-        <div className="md:w-[300px] w-full h-0.5 bg-secondary/20"></div>
+    <Section className="py-24" id="portfolio">
+      <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="max-w-3xl">
+          <Badge variant="outline" className="mb-4 border-primary text-secondary">
+            {t("projects.subtitle")}
+          </Badge>
+          <h2 className="text-3xl font-black text-black dark:text-gray-100 md:text-5xl">
+            {t("projects.title")}
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-muted-foreground">
+            {t("projects.intro")}
+          </p>
+        </div>
+        <Button variant="outline" asChild>
+          <Link href={`/${locale}/pricing`}>
+            {t("projects.moreProjects")}
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
       </div>
-      <h3 className="dark:text-gray-400 text-gray-700 text-5xl font-bold fira-sans">
-        {t("projects.subtitle")}
-      </h3>
-      <div className="grid grid-cols-1 2xl:grid-cols-4 lg:grid-cols-3  gap-4 2xl:h-[600px] my-8 w-full">
-        <WobbleCard
-          containerClassName="col-span-1 lg:col-span-3 2xl:col-span-2  bg-secondary/70   lg:grayscale-[70%] lg:hover:grayscale-0"
-          className=""
-        >
-          <div className=" 2xl:w-full lg:w-1/2  h-full">
-            <h2 className="text-left text-balance text-base text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
-              {t("projects.project1.name")}
-            </h2>
 
-            <p className=" 2xl:mt-4 text-left  text-base/6 dark:text-white text-gray-700">
-              {t("projects.project1.description")}
-            </p>
-            <ul className="flex flex-row gap-2  flex-wrap 2xl:mt-4 text-left  text-base/6  ">
-              <li>
-                <Code className="text-sm">NextJs</Code>
-              </li>
-              <li>
-                {" "}
-                <Code className="text-sm">MongoDB</Code>{" "}
-              </li>
-              <li>
-                <Code className="text-sm">Prisma</Code>
-              </li>
-              <li>
-                <Code className="text-sm">Tailwind CSS</Code>
-              </li>
-            </ul>
-            <ul className="absolute flex flex-row gap-2 mt-4 text-left  text-base/6 text-neutral-200 z-[100] ">
-              <li>
-                <Link
-                  target="_blank"
-                  href="https://github.com/MohMost/blog-project"
-                >
-                  <GithubIcon
-                    size={25}
-                    className="fill-gray-700 dark:fill-white"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  href="https://www.figma.com/design/0WNWtTuWUMV4wVDMlOWUo2/RubyDash-%7C-home-page?node-id=0-1&t=tHwSqPFX8sPCkqqg-1"
-                >
-                  <FigmaIcon
-                    size={25}
-                    className="fill-gray-700 dark:fill-white"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link target="_blank" href="https://rubydash.vercel.app/">
-                  <SquareArrowOutUpRight
-                    className="text-gray-700 dark:text-white"
-                    size={25}
-                  />
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <Image
-            src="/rubydash.webp"
-            width={1000}
-            height={1000}
-            alt="linear demo image"
-            className="absolute hidden lg:block 2xl:w-[90%] lg:w-[50%]   filter 2xl:-bottom-20 -bottom-10 -right-10 object-contain rounded-2xl"
-          />
-        </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 2xl:col-span-1 lg:col-span-1  h-full lg:hover:bg-primary/70  bg-primary/70  lg:grayscale-[70%] lg:hover:grayscale-0">
-          <Image
-            src="/makeviwesmobile.png"
-            width={500}
-            height={500}
-            alt="linear demo image"
-            className="hidden 2xl:absolute 2xl:block h-full md:-right-10 -top-80 object-contain rounded-2xl"
-          />
-          <div className=" flex flex-col justify-center lg:justify-end h-full max-w-sm">
-            <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
-              {t("projects.project2.name")}
-            </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
-              {t("projects.project2.description")}
-            </p>
-            <ul className="flex flex-row gap-2 mt-4 text-left  flex-wrap text-base/6  ">
-              <li>
-                <Code className="text-sm">NextJs</Code>
-              </li>
-
-              <li>
-                <Code className="text-sm">Tailwind CSS</Code>
-              </li>
-            </ul>
-            <ul className="absolute flex bottom-10 flex-row gap-2 mt-4 text-left  text-base/6 text-neutral-200 z-[100] ">
-              <li>
-                <Link
-                  target="_blank"
-                  href="https://github.com/MohMost/make-views"
-                >
-                  <GithubIcon
-                    size={25}
-                    className="fill-gray-700 dark:fill-white"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  href="https://www.figma.com/design/nQy5qQoNlJBFH7bSyNoQOj/Portfolio-website-for-video-editors-(Community)?node-id=0-1&t=XgqFM0ghUKBFu4XC-1"
-                >
-                  <FigmaIcon
-                    size={25}
-                    className="fill-gray-700 dark:fill-white"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link target="_blank" href="https://makeviews.vercel.app/">
-                  <SquareArrowOutUpRight
-                    className="text-gray-700 dark:text-white"
-                    size={25}
-                  />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </WobbleCard>
-        <WobbleCard containerClassName="group col-span-1 2xl:col-span-1 lg:col-span-2  lg:hover:bg-secondary/70 h-full bg-secondary  lg:grayscale-[70%] lg:hover:grayscale-0">
-          <div className=" flex flex-col justify-start h-1/2 max-w-sm">
-            <h2 className="max-w-80  text-left text-balance text-base text-xl md:text-xl lg:text-3xl  font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
-              {t("projects.project3.name")}
-            </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
-              {t("projects.project3.description")}
-            </p>
-            <ul className="flex flex-row gap-2 mt-2  flex-wrap text-left  text-base/6  ">
-              <li>
-                <Code className="text-sm">NextJs</Code>
-              </li>
-              <li>
-                <Code className="text-sm">Tailwind CSS</Code>
-              </li>{" "}
-              <li>
-                <Code className="text-sm">PostgreSQL</Code>
-              </li>
-            </ul>
-            <ul className="absolute flex bottom-10 flex-row gap-2 mt-4 text-left  text-base/6 text-neutral-200 z-[100] ">
-              <li>
-                <Link
-                  target="_blank"
-                  href="https://github.com/Vanity-Corp/vanity-corp-site"
-                >
-                  <GithubIcon
-                    size={25}
-                    className="fill-gray-700 dark:fill-white"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  target="_blank"
-                  href="https://www.figma.com/design/PU0CEHgSmv7qOUfhxQsol1/Vanity-corp?node-id=0-1&t=BLPGDZEyilRcsH9n-1"
-                >
-                  <FigmaIcon
-                    size={25}
-                    className="fill-gray-700 dark:fill-white"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link target="_blank" href="https://vanitycorp.fr/">
-                  <SquareArrowOutUpRight
-                    className="text-gray-700 dark:text-white"
-                    size={25}
-                  />
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <Image
-            src="/vanity.png"
-            width={2500}
-            height={2500}
-            alt="linear demo image"
-            className="absolute hidden lg:block 2xl:max-w-[150%] lg:max-w-[60%] 2xl:-bottom-20 2xl:-right-52 lg:bottom-0 lg:-right-40  object-contain "
-          />
-        </WobbleCard>
+      <div className="grid gap-5 md:grid-cols-2">
+        {projects.map((project, index) => (
+          <Card key={project.titleKey} className="overflow-hidden border-border/70 bg-card/90">
+            <CardContent className="p-0">
+              <div className="flex min-h-[280px] flex-col justify-between bg-gradient-to-br from-secondary/90 via-slate-900 to-black p-6 text-white">
+                <div className="flex items-center justify-between">
+                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-white/15 backdrop-blur">
+                    <project.icon className="h-7 w-7" />
+                  </div>
+                  <span className="text-sm font-semibold text-white/60">0{index + 1}</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black">{t(project.titleKey)}</h3>
+                  <p className="mt-4 leading-7 text-white/75">{t(project.descriptionKey)}</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
-      <Button
-        variant={"link"}
-        className="dark:text-primary text-secondary font-semibold text-lg"
-      >
-        <Link href="/projects">{t("projects.moreProjects")}</Link>
-      </Button>
     </Section>
   );
 }
