@@ -72,6 +72,30 @@ export default {
     },
     moreProjects: "Comparer les offres",
   },
+
+  team: {
+    title: "L'équipe qui livre et qui prospecte",
+    subtitle: "Équipe",
+    intro:
+      "Une petite équipe complémentaire : développement web, IA, cybersécurité et prospection commerciale pour transformer les idées en contrats signés.",
+    member1: {
+      role: "Développeur web & applications",
+      description:
+        "Mohamed conçoit des sites, plateformes et applications web avec plus de 5 ans d'expérience en livraison produit.",
+    },
+    member2: {
+      role: "Experte IA & cybersécurité",
+      description:
+        "Tinhinan, aussi connue sous le pseudo 50ulR3AP3R, apporte l'expertise IA, automatisation et sécurité pour des projets plus robustes.",
+    },
+    member3: {
+      role: "Commercial / prospection",
+      description:
+        "Farinas pilote la prospection, les premiers échanges et le suivi commercial pour créer un flux régulier de rendez-vous.",
+    },
+    imageNote:
+      "Images prêtes à ajouter : déposez vos photos dans /public/team et renseignez le chemin dans le tableau teamMembers du composant Team.",
+  },
   contact: {
     title: "Prêt à lancer la prospection ?",
     subtitle: "Plan 30 jours",
@@ -91,6 +115,7 @@ export default {
   navbar: {
     services: "Offres",
     portfolio: "Portfolio",
+    team: "Équipe",
     pricing: "Tarifs",
     contact: "Contact",
     cta: "Diagnostic gratuit",

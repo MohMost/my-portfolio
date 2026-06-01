@@ -18,6 +18,7 @@ export default function Header() {
     () => [
       { name: `${t("navbar.services")}`, id: "#services" },
       { name: `${t("navbar.portfolio")}`, id: "#portfolio" },
+      { name: `${t("navbar.team")}`, id: "#team" },
       { name: `${t("navbar.pricing")}`, id: pricingPath },
       { name: `${t("navbar.contact")}`, id: "#contact" },
     ],

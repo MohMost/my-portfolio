@@ -72,6 +72,30 @@ export default {
     },
     moreProjects: "Compare offers",
   },
+
+  team: {
+    title: "The team that delivers and prospects",
+    subtitle: "Team",
+    intro:
+      "A small complementary team: web development, AI, cybersecurity and sales outreach to turn ideas into signed deals.",
+    member1: {
+      role: "Web & application developer",
+      description:
+        "Mohamed builds websites, platforms and web applications with more than 5 years of product delivery experience.",
+    },
+    member2: {
+      role: "AI & cybersecurity expert",
+      description:
+        "Tinhinan, also known as 50ulR3AP3R, brings AI, automation and security expertise for more robust projects.",
+    },
+    member3: {
+      role: "Sales / prospecting",
+      description:
+        "Farinas leads outreach, first conversations and commercial follow-up to create a steady flow of qualified meetings.",
+    },
+    imageNote:
+      "Images are ready to add: place your photos in /public/team and fill the path in the teamMembers array inside the Team component.",
+  },
   contact: {
     title: "Ready to launch outreach?",
     subtitle: "30-day plan",
@@ -91,6 +115,7 @@ export default {
   navbar: {
     services: "Offers",
     portfolio: "Portfolio",
+    team: "Team",
     pricing: "Pricing",
     contact: "Contact",
     cta: "Free diagnosis",
