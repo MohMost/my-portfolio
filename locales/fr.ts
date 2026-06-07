@@ -2,9 +2,9 @@ export default {
   banner: {
     text1: "Bonjour, je m'appelle",
     text2: "Mostefai Mohamed.",
-    text3: "Je crée des expériences web modernes et intuitives",
+    text3: "Votre entreprise mérite mieux qu’une page Facebook.",
     text4:
-      "Je suis un développeur web Frontend autodidacte spécialisé en JavaScript, créant des applications web pour les entreprises et les utilisateurs.",
+      "Nous créons une passerelle  entre votre marque et vos clients.",
   },
   skills: {
     title: "Compétences",
