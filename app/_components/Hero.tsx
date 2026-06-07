@@ -15,9 +15,7 @@ const Hero = async () => {
     <Section className="flex h-screen items-center justify-center w-full">
       <div className="flex flex-col items-center justify-center w-full ">
         <div className="text-center lg:text-left w-full ">
-          <p className="text-xl w-full font-semibold tracking-wider text-secondary ">
-            {t("banner.text1")} {/* Hi, my name is */}
-          </p>
+
           <h1 className="2xl:text-6xl xl:text-5xl lg:text-2xl font-bold leading-snug tracking-tight lg:leading-tight xl:leading-tight dark:text-gray-300 text-black inconsolata-bold-title">
             {t("banner.text2")} {/* Mostefai Mohamed */}
           </h1>
@@ -26,9 +24,7 @@ const Hero = async () => {
             {/* I build modern and intuitive web experiences */}
           </h1>
           <p className="py-5 base leading-normal text-gray-500 2xl:text-1xl xl:text-[20px] lg:text-2xl dark:text-gray-400 fira-sans">
-            {t("banner.text4").split("JavaScript")[0]}
-            <Code>JavaScript</Code>
-            {t("banner.text4").split("JavaScript")[1]}
+            {t("banner.text4")}
           </p>
         </div>
         <ul className="flex md:hidden w-full flex-row justify-center items-center gap-6 text-white">
