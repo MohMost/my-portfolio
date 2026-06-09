@@ -1,62 +1,62 @@
 export default {
   banner: {
-    text1: "Bonjour, je m'appelle",
-    text2: "Mostefai Mohamed.",
-    text3: "Je crée des expériences web modernes et intuitives",
-    text4:
-      "Je suis un développeur web full-stack autodidacte spécialisé en JavaScript, créant des applications web pour les entreprises et les utilisateurs.",
+    text1: "Bienvenue chez",
+    text2: "Itri Portal.",
+    text3: "Votre entreprise mérite plus qu’une simple page Facebook.",
+    text4: 
+      "Nous créons une passerelle claire entre votre produit/service et vos clients.",
   },
   skills: {
-    title: "Compétences",
-    subtitle: "J'utilise...",
+    title: "Expertises",
+    subtitle: "Nous utilisons...",
     skill1: {
       name: "React",
       description:
-        "Je travaille principalement avec React comme framework principal, et j'utilise également Next.js avec TypeScript pour des applications full-stack.",
+        "Nous développons des interfaces web modernes et performantes avec React, Next.js et TypeScript pour offrir des expériences utilisateur rapides et évolutives.",
     },
     skill2: {
       name: "PostgreSQL",
       description:
-        "J'utilise PostgreSQL comme base de données relationnelle pour gérer des requêtes complexes et assurer une gestion fiable des données dans mes projets.",
+        "Nous utilisons PostgreSQL pour concevoir des bases de données robustes, sécurisées et adaptées aux besoins des entreprises modernes.",
     },
     skill3: {
       name: "Tailwind CSS",
       description:
-        "J'utilise Tailwind CSS pour le style, car il me permet de créer rapidement des interfaces utilisateurs réactives et modernes.",
+        "Nous créons des interfaces élégantes, responsives et optimisées grâce à Tailwind CSS, garantissant une expérience cohérente sur tous les appareils.",
     },
-    otherSkills: "Autres compétences..",
+    otherSkills: "Nos autres expertises...",
   },
   projects: {
-    title: "Projets",
-    subtitle: "Mes projets...",
+    title: "Réalisations",
+    subtitle: "Quelques projets...",
     project1: {
       name: "RubyDash",
       description:
-        "Une plateforme de blog dynamique et entièrement responsive qui permet aux utilisateurs de créer, lire, mettre à jour et supprimer des articles, avec authentification des utilisateurs.",
+        "Une plateforme web moderne développée pour offrir une expérience utilisateur fluide, avec gestion de contenu, authentification et architecture évolutive.",
     },
     project2: {
       name: "MakeViews",
       description:
-        "Make Views est une agence web spécialisée dans la création de vidéos de haute qualité et l'aide à la croissance numérique des clients.",
+        "Un site web conçu pour une agence spécialisée dans la croissance digitale, mettant en avant ses services et renforçant sa présence en ligne.",
     },
     project3: {
       name: "Vanity Corp",
       description:
-        "Une agence de marketing pour laquelle je travaille actuellement en tant que freelance. Je les ai aidés à migrer leur site web de WordPress à Next.js.",
+        "Refonte et modernisation d’un site web d’entreprise avec une architecture performante, optimisée pour la vitesse, le référencement et la conversion.",
     },
-    moreProjects: "Plus de projets...",
+    moreProjects: "Découvrir plus de projets...",
   },
   contact: {
     title: "Contact",
-    subtitle: "Entrer en contact",
-    button: "Contactez-moi",
+    subtitle: "Parlons de votre projet",
+    button: "Demander un devis",
   },
   footer: {
     text: "Conçu & Développé par",
   },
   navbar: {
-    skills: "Competences",
-    projects: "Projets",
+    skills: "Expertises",
+    projects: "Réalisations",
     contact: "Contact",
   },
 } as const;
