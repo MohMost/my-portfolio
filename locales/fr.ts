@@ -3,7 +3,7 @@ export default {
     text1: "Bienvenue chez",
     text2: "Itri Portal.",
     text3: "Votre entreprise mérite plus qu’une simple page Facebook.",
-    text4: 
+    text4:
       "Nous créons une passerelle claire entre votre produit/service et vos clients.",
   },
   skills: {
