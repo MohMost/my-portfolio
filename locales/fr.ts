@@ -3,7 +3,7 @@ export default {
     text1: "Bonjour, je m'appelle",
     text2: "Mostefai Mohamed.",
     text3: "Je crée des expériences web modernes et intuitives",
-    text4: `Je suis un développeur web Frontend autodidacte spécialisé en JavaScript, créant des applications web pour les entreprises et les utilisateurs finaux.`,
+    text4: `Je suis un développeur web fullstack autodidacte spécialisé en JavaScript, créant des applications web pour les entreprises et les utilisateurs finaux.`,
   },
   skills: {
     title: "Compétences",
