@@ -19,20 +19,20 @@ async function Projects() {
         </h2>
         <div className="md:w-[300px] w-full h-0.5 bg-secondary/20"></div>
       </div>
-      <h3 className="dark:text-gray-400 text-gray-700 text-5xl font-bold fira-sans">
+      <h3 className="text-foreground text-4xl md:text-5xl font-heading tracking-tight">
         {t("projects.subtitle")}
       </h3>
       <div className="grid grid-cols-1 2xl:grid-cols-4 lg:grid-cols-3  gap-4 2xl:h-[600px] my-8 w-full">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-3 2xl:col-span-2  bg-secondary/70   lg:grayscale-[70%] lg:hover:grayscale-0"
+          containerClassName="col-span-1 lg:col-span-3 2xl:col-span-2"
           className=""
         >
           <div className=" 2xl:w-full lg:w-1/2  h-full">
-            <h2 className="text-left text-balance text-base text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
+            <h2 className="text-left text-balance text-base text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-card-foreground">
               {t("projects.project1.name")}
             </h2>
 
-            <p className=" 2xl:mt-4 text-left  text-base/6 dark:text-white text-gray-700">
+            <p className=" 2xl:mt-4 text-left  text-base/6 text-card-foreground/80">
               {t("projects.project1.description")}
             </p>
             <ul className="flex flex-row gap-2  flex-wrap 2xl:mt-4 text-left  text-base/6  ">
@@ -58,7 +58,7 @@ async function Projects() {
                 >
                   <GithubIcon
                     size={25}
-                    className="fill-gray-700 dark:fill-white"
+                    className="fill-muted-foreground hover:fill-foreground transition-colors"
                   />
                 </Link>
               </li>
@@ -69,14 +69,14 @@ async function Projects() {
                 >
                   <FigmaIcon
                     size={25}
-                    className="fill-gray-700 dark:fill-white"
+                    className="fill-muted-foreground hover:fill-foreground transition-colors"
                   />
                 </Link>
               </li>
               <li>
                 <Link target="_blank" href="https://rubydash.vercel.app/">
                   <SquareArrowOutUpRight
-                    className="text-gray-700 dark:text-white"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                     size={25}
                   />
                 </Link>
@@ -89,22 +89,22 @@ async function Projects() {
             width={1000}
             height={1000}
             alt="linear demo image"
-            className="absolute hidden lg:block 2xl:w-[90%] lg:w-[50%]   filter 2xl:-bottom-20 -bottom-10 -right-10 object-contain rounded-2xl"
+            className="absolute hidden lg:block 2xl:w-[90%] lg:w-[50%]   filter 2xl:-bottom-20 -bottom-10 -right-10 object-contain rounded-lg"
           />
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 2xl:col-span-1 lg:col-span-1  h-full lg:hover:bg-primary/70  bg-primary/70  lg:grayscale-[70%] lg:hover:grayscale-0">
+        <WobbleCard containerClassName="col-span-1 2xl:col-span-1 lg:col-span-1 h-full">
           <Image
             src="/makeviwesmobile.png"
             width={500}
             height={500}
             alt="linear demo image"
-            className="hidden 2xl:absolute 2xl:block h-full md:-right-10 -top-80 object-contain rounded-2xl"
+            className="hidden 2xl:absolute 2xl:block h-full md:-right-10 -top-80 object-contain rounded-lg"
           />
           <div className=" flex flex-col justify-center lg:justify-end h-full max-w-sm">
-            <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
+            <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-xl md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-card-foreground">
               {t("projects.project2.name")}
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
+            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-card-foreground">
               {t("projects.project2.description")}
             </p>
             <ul className="flex flex-row gap-2 mt-4 text-left  flex-wrap text-base/6  ">
@@ -124,7 +124,7 @@ async function Projects() {
                 >
                   <GithubIcon
                     size={25}
-                    className="fill-gray-700 dark:fill-white"
+                    className="fill-muted-foreground hover:fill-foreground transition-colors"
                   />
                 </Link>
               </li>
@@ -135,14 +135,14 @@ async function Projects() {
                 >
                   <FigmaIcon
                     size={25}
-                    className="fill-gray-700 dark:fill-white"
+                    className="fill-muted-foreground hover:fill-foreground transition-colors"
                   />
                 </Link>
               </li>
               <li>
                 <Link target="_blank" href="https://makeviews.vercel.app/">
                   <SquareArrowOutUpRight
-                    className="text-gray-700 dark:text-white"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                     size={25}
                   />
                 </Link>
@@ -150,12 +150,12 @@ async function Projects() {
             </ul>
           </div>
         </WobbleCard>
-        <WobbleCard containerClassName="group col-span-1 2xl:col-span-1 lg:col-span-2  lg:hover:bg-secondary/70 h-full bg-secondary  lg:grayscale-[70%] lg:hover:grayscale-0">
+        <WobbleCard containerClassName="group col-span-1 2xl:col-span-1 lg:col-span-2 h-full">
           <div className=" flex flex-col justify-start h-1/2 max-w-sm">
-            <h2 className="max-w-80  text-left text-balance text-base text-xl md:text-xl lg:text-3xl  font-semibold tracking-[-0.015em] dark:text-white text-gray-700">
+            <h2 className="max-w-80  text-left text-balance text-base text-xl md:text-xl lg:text-3xl  font-semibold tracking-[-0.015em] text-card-foreground">
               {t("projects.project3.name")}
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 dark:text-white text-gray-700">
+            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-card-foreground">
               {t("projects.project3.description")}
             </p>
             <ul className="flex flex-row gap-2 mt-2  flex-wrap text-left  text-base/6  ">
@@ -177,7 +177,7 @@ async function Projects() {
                 >
                   <GithubIcon
                     size={25}
-                    className="fill-gray-700 dark:fill-white"
+                    className="fill-muted-foreground hover:fill-foreground transition-colors"
                   />
                 </Link>
               </li>
@@ -188,14 +188,14 @@ async function Projects() {
                 >
                   <FigmaIcon
                     size={25}
-                    className="fill-gray-700 dark:fill-white"
+                    className="fill-muted-foreground hover:fill-foreground transition-colors"
                   />
                 </Link>
               </li>
               <li>
                 <Link target="_blank" href="https://vanitycorp.fr/">
                   <SquareArrowOutUpRight
-                    className="text-gray-700 dark:text-white"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                     size={25}
                   />
                 </Link>
@@ -211,10 +211,7 @@ async function Projects() {
           />
         </WobbleCard>
       </div>
-      <Button
-        variant={"link"}
-        className="dark:text-primary text-secondary font-semibold text-lg"
-      >
+      <Button variant={"link"} className="font-semibold text-lg">
         <Link href="/projects">{t("projects.moreProjects")}</Link>
       </Button>
     </Section>

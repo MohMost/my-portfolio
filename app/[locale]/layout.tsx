@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Inconsolata, Fira_Sans } from "next/font/google";
+import {
+  IBM_Plex_Sans,
+  IBM_Plex_Mono,
+  Fraunces,
+  Encode_Sans_Semi_Expanded,
+} from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
@@ -8,15 +13,35 @@ import { cn } from "@/lib/utils";
 import Providers from "./providers";
 import Footer from "../_components/Footer";
 
-const inconsolata = Inconsolata({
+// Hex's actual body/code faces — exact match, both free (Google Fonts).
+const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-inco",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
 });
 
-const firaSans = Fira_Sans({
+const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-caption",
-  weight: "100",
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+});
+
+// Hex's display/heading faces (PP Editorial New, PP Formula SemiExtended) are
+// paid Pangram Pangram fonts we don't hold a license for. Fraunces italic and
+// Encode Sans Semi Expanded stand in as the closest free equivalents: an
+// ultra-light editorial italic serif, and a semi-expanded grotesk for
+// headlines — the latter even shares PP Formula's "semi-extended" width cut.
+const displaySerif = Fraunces({
+  subsets: ["latin"],
+  weight: ["300"],
+  style: ["italic"],
+  variable: "--font-serif",
+});
+
+const headingSans = Encode_Sans_Semi_Expanded({
+  subsets: ["latin"],
+  weight: ["700", "800"],
+  variable: "--font-heading",
 });
 
 export const metadata: Metadata = {
@@ -36,9 +61,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          inconsolata.variable,
-          firaSans.variable,
-          "flex flex-col inconsolata  bg-background "
+          plexSans.variable,
+          plexMono.variable,
+          displaySerif.variable,
+          headingSans.variable,
+          "flex flex-col font-sans bg-background antialiased"
         )}
       >
         <main>

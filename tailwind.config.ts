@@ -18,8 +18,15 @@ const config = {
       },
     },
     fontFamily: {
-      sans: ["Inconsolata"],
-      caption: ["Fira Sans"],
+      sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+      mono: [
+        "var(--font-mono)",
+        "ui-monospace",
+        "SFMono-Regular",
+        "monospace",
+      ],
+      serif: ["var(--font-serif)", "Georgia", "serif"],
+      heading: ["var(--font-heading)", "var(--font-sans)", "sans-serif"],
     },
     extend: {
       colors: {

@@ -23,6 +23,11 @@ export default {
       description:
         "I rely on Tailwind CSS for styling, as it allows me to quickly build responsive and modern user interfaces.",
     },
+    skill4: {
+      name: "Claude Code",
+      description:
+        "I pair with Claude Code for refactors, debugging, and shipping full-stack features faster without losing control of the codebase.",
+    },
     otherSkills: "Other skills..",
   },
   projects: {
