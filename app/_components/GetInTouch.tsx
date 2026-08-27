@@ -25,25 +25,31 @@ async function GetInTouch() {
         </h2>
       </div>
 
-      <h3 className="dark:text-gray-400 text-center text-gray-700 text-5xl font-bold fira-sans">
+      <h3 className="text-center text-foreground text-4xl md:text-5xl font-heading tracking-tight">
         {t("contact.subtitle")}
       </h3>
-      <ul className="flex md:hidden w-full flex-row justify-center items-center gap-6 text-white">
+      <ul className="flex md:hidden w-full flex-row justify-center items-center gap-6">
         <li className="  text-base">
           <Link className="flex justify-center" href="/">
-            <GithubIcon size={25} className="fill-gray-700 dark:fill-white" />
+            <GithubIcon
+              size={25}
+              className="fill-muted-foreground hover:fill-foreground transition-colors"
+            />
           </Link>
         </li>
         <li className="text-base">
           <Link className="flex justify-center" href="/about">
-            <LinkedinIcon size={25} className="fill-gray-700 dark:fill-white" />
+            <LinkedinIcon
+              size={25}
+              className="fill-muted-foreground hover:fill-foreground transition-colors"
+            />
           </Link>
         </li>
         <li className=" text-base">
           <Link className="flex justify-center" href="/about">
             <InstagramIcon
               size={25}
-              className="fill-gray-700 dark:fill-white"
+              className="fill-muted-foreground hover:fill-foreground transition-colors"
             />
           </Link>
         </li>

@@ -4,57 +4,84 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    /* parchment canvas + ink-violet system, adapted from Hex */
+    --background: 20 20% 99%;
+    --foreground: 240 90% 5%;
+    --muted: 230 20% 94%;
+    --muted-foreground: 225 14% 40%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 240 90% 5%;
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-    --border: 233 8% 24%;
-    --input: 233 8% 27%;
-    --primary: 44 100% 71%;
-    --primary-foreground: 44 100% 11%;
-    --secondary: 243 75% 59%;
-    --secondary-foreground: 44 30% 85%;
-    --accent: 233 18% 34%;
-    --accent-foreground: 233 18% 94%;
-    --destructive: 10 90% 57%;
-    --destructive-foreground: 0 0% 100%;
-    --ring: 44 100% 71%;
-    --radius: 0.5rem;
+    --card-foreground: 240 90% 5%;
+    --border: 315 8% 85%;
+    --input: 315 8% 85%;
+    --primary: 251 39% 37%;
+    --primary-foreground: 20 20% 99%;
+    --secondary: 249 37% 55%;
+    --secondary-foreground: 20 20% 99%;
+    --accent: 230 20% 94%;
+    --accent-foreground: 240 90% 5%;
+    --destructive: 6 48% 44%;
+    --destructive-foreground: 20 20% 99%;
+    --ring: 251 39% 37%;
+    --radius: 0.375rem;
+
+    --code-key: 251 39% 45%;
+    --code-string: 140 35% 34%;
+    --code-fn: 213 45% 45%;
   }
 
   .dark {
-    --background: 288, 7%, 13%;
-    --foreground: 173 24% 93%;
-    --muted: 233 12% 23%;
-    --muted-foreground: 233 12% 73%;
-    --popover: 233 18% 16%;
-    --popover-foreground: 0 0% 100%;
-    --card: 233 18% 17%;
-    --card-foreground: 173 24% 98%;
-    --border: 233 8% 24%;
-    --input: 233 8% 27%;
-    --primary: 44 100% 71%;
-    --primary-foreground: 44 100% 11%;
-    --secondary: 243 75% 59%;
-    --secondary-foreground: 44 30% 85%;
-    --accent: 233 18% 34%;
-    --accent-foreground: 233 18% 94%;
-    --destructive: 10 90% 57%;
-    --destructive-foreground: 0 0% 100%;
-    --ring: 44 100% 71%;
+    --background: 240 90% 5%;
+    --foreground: 255 25% 96%;
+    --muted: 271 14% 20%;
+    --muted-foreground: 278 8% 65%;
+    --popover: 271 22% 12%;
+    --popover-foreground: 255 25% 96%;
+    --card: 271 22% 12%;
+    --card-foreground: 255 25% 96%;
+    --border: 271 14% 26%;
+    --input: 271 14% 26%;
+    --primary: 251 46% 72%;
+    --primary-foreground: 240 90% 5%;
+    --secondary: 249 37% 60%;
+    --secondary-foreground: 240 90% 5%;
+    --accent: 271 14% 20%;
+    --accent-foreground: 255 25% 96%;
+    --destructive: 6 55% 55%;
+    --destructive-foreground: 240 90% 5%;
+    --ring: 251 46% 72%;
+
+    --code-key: 251 55% 78%;
+    --code-string: 140 40% 62%;
+    --code-fn: 213 70% 74%;
   }
 }
 
-.inconsolata {
-  font-family: "Inconsolata", monospace;
-  font-weight: "700";
+.code-key {
+  color: hsl(var(--code-key));
+}
+.code-string {
+  color: hsl(var(--code-string));
+}
+.code-fn {
+  color: hsl(var(--code-fn));
 }
 
-.fira-sans {
-  font-family: "Fira Sans", sans-serif;
+/* paper grain, laid over the whole canvas like a printed sheet */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.14;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='3.2' intercept='-1.1'/%3E%3CfeFuncG type='linear' slope='3.2' intercept='-1.1'/%3E%3CfeFuncB type='linear' slope='3.2' intercept='-1.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.dark body::after {
+  opacity: 0.22;
+  mix-blend-mode: overlay;
 }

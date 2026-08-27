@@ -44,13 +44,13 @@ const projects: ProjectsTypes[] = [
     title: "Cemika cuisine",
     des: "",
     link: "https://cemika-cuisine.com/",
-    figma: <FigmaIcon size={25} className="fill-white" />,
+    figma: <FigmaIcon size={25} className="fill-foreground" />,
     figmaLink:
       "https://www.figma.com/design/CQVZUQWIPNJNIPjOjuVVlK/CemikaV2?node-id=521-34802&t=fSJw8TpILSYLBr06-0",
     technologies: [
       {
         name: "Wordpress",
-        icon: <WordpressIcon size={25} className="fill-white" />,
+        icon: <WordpressIcon size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -63,11 +63,11 @@ const projects: ProjectsTypes[] = [
     technologies: [
       {
         name: "React",
-        icon: <ReactIcon size={25} className="fill-white" />,
+        icon: <ReactIcon size={25} className="fill-foreground" />,
       },
       {
         name: "Tailwind",
-        icon: <Tailwind size={25} className="fill-white" />,
+        icon: <Tailwind size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -76,21 +76,21 @@ const projects: ProjectsTypes[] = [
     img: "/automatisons.png",
     title: "Automatisons",
     des: "",
-    github: <GithubIcon size={25} className="fill-white" />,
+    github: <GithubIcon size={25} className="fill-foreground" />,
     githubLink: "https://github.com/LK-Organization/automatisations",
     link: "https://href.li/?https://www.automatisons.fr/",
     technologies: [
       {
         name: "Astro",
-        icon: <AstroIcon size={25} className="fill-white" />,
+        icon: <AstroIcon size={25} className="fill-foreground" />,
       },
       {
         name: "React",
-        icon: <ReactIcon size={25} className="fill-white" />,
+        icon: <ReactIcon size={25} className="fill-foreground" />,
       },
       {
         name: "Tailwind",
-        icon: <Tailwind size={25} className="fill-white" />,
+        icon: <Tailwind size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -99,17 +99,17 @@ const projects: ProjectsTypes[] = [
     img: "/vanitycorp.webp",
     title: "Vanity Corp",
     des: "",
-    github: <GithubIcon size={25} className="fill-white" />,
+    github: <GithubIcon size={25} className="fill-foreground" />,
     githubLink: "https://github.com/Vanity-Corp/vanity-corp-site",
     link: "https://www.vanitycorp.fr/",
     technologies: [
       {
         name: "Nextjs",
-        icon: <Nextjs size={25} className="fill-white" />,
+        icon: <Nextjs size={25} className="fill-foreground" />,
       },
       {
         name: "Tailwind",
-        icon: <Tailwind size={25} className="fill-white" />,
+        icon: <Tailwind size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -119,20 +119,20 @@ const projects: ProjectsTypes[] = [
     title: "Melobellus",
     des: "",
     link: "https://melobellus.vercel.app/",
-    github: <GithubIcon size={25} className="fill-white" />,
+    github: <GithubIcon size={25} className="fill-foreground" />,
     githubLink: "https://github.com/MohMost/melobellus-nextjs",
     technologies: [
       {
         name: "Nextjs",
-        icon: <Nextjs size={25} className="fill-white" key={1} />,
+        icon: <Nextjs size={25} className="fill-foreground" key={1} />,
       },
       {
         name: "Tailwind",
-        icon: <Tailwind size={25} className="fill-white" key={2} />,
+        icon: <Tailwind size={25} className="fill-foreground" key={2} />,
       },
       {
         name: "Firebase",
-        icon: <FireBaseIcon size={25} className="fill-white" key={3} />,
+        icon: <FireBaseIcon size={25} className="fill-foreground" key={3} />,
       },
     ],
   },
@@ -145,7 +145,7 @@ const projects: ProjectsTypes[] = [
     technologies: [
       {
         name: "Wordpress",
-        icon: <WordpressIcon size={25} className="fill-white" />,
+        icon: <WordpressIcon size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -158,7 +158,7 @@ const projects: ProjectsTypes[] = [
     technologies: [
       {
         name: "Wordpress",
-        icon: <WordpressIcon size={25} className="fill-white" />,
+        icon: <WordpressIcon size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -171,7 +171,7 @@ const projects: ProjectsTypes[] = [
     technologies: [
       {
         name: "Wordpress",
-        icon: <WordpressIcon size={25} className="fill-white" />,
+        icon: <WordpressIcon size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -180,24 +180,24 @@ const projects: ProjectsTypes[] = [
     img: "/rubydash.webp",
     title: "Rubydash",
     des: "",
-    github: <GithubIcon size={25} className="fill-white" />,
+    github: <GithubIcon size={25} className="fill-foreground" />,
     githubLink: "https://github.com/MohMost/blog-project",
-    figma: <FigmaIcon size={25} className="fill-white" />,
+    figma: <FigmaIcon size={25} className="fill-foreground" />,
     figmaLink:
       "https://www.figma.com/design/0WNWtTuWUMV4wVDMlOWUo2/RubyDash-%7C-home-page?node-id=0-1&t=tHwSqPFX8sPCkqqg-1",
     link: "https://rubydash.vercel.app/",
     technologies: [
       {
         name: "Nextjs",
-        icon: <Nextjs size={25} className="fill-white" />,
+        icon: <Nextjs size={25} className="fill-foreground" />,
       },
       {
         name: "Tailwind",
-        icon: <Tailwind size={25} className="fill-white" />,
+        icon: <Tailwind size={25} className="fill-foreground" />,
       },
       {
         name: "MongoDB",
-        icon: <MongoDBIcon size={25} className="fill-white" />,
+        icon: <MongoDBIcon size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -206,20 +206,20 @@ const projects: ProjectsTypes[] = [
     img: "/MakeViews.webp",
     title: "MakeViews",
     des: "",
-    github: <GithubIcon size={25} className="fill-white" />,
+    github: <GithubIcon size={25} className="fill-foreground" />,
     githubLink: "https://github.com/MohMost/make-views",
-    figma: <FigmaIcon size={25} className="fill-white" />,
+    figma: <FigmaIcon size={25} className="fill-foreground" />,
     figmaLink:
       "https://www.figma.com/design/nQy5qQoNlJBFH7bSyNoQOj/Portfolio-website-for-video-editors-(Community)?node-id=0-1&t=XgqFM0ghUKBFu4XC-1",
     link: "https://makeviews.vercel.app/",
     technologies: [
       {
         name: "Nextjs",
-        icon: <Nextjs size={25} className="fill-white" />,
+        icon: <Nextjs size={25} className="fill-foreground" />,
       },
       {
         name: "Tailwind",
-        icon: <Tailwind size={25} className="fill-white" />,
+        icon: <Tailwind size={25} className="fill-foreground" />,
       },
     ],
   },
@@ -250,19 +250,19 @@ export default function index() {
                 viewport={{ once: false }}
                 className={` relative  ${colSpanClass} `}
               >
-                <div className="w-auto h-full">
+                <div className="w-auto h-full rounded-lg overflow-hidden border border-primary/10 shadow-[0_1px_2px_rgba(49,38,59,0.10),0_26px_57px_rgba(49,38,59,0.10)]">
                   <Image
                     src={project?.img}
                     alt={"image"}
                     height={600}
                     width={1200}
-                    className="h-full w-full object-cover object-left-top rounded-xl"
+                    className="h-full w-full object-cover object-left-top"
                   />
                 </div>
-                <div className="absolute lg:bottom-2 bottom-0 text-black w-full p-4 flex justify-between items-center">
+                <div className="absolute lg:bottom-4 bottom-2 left-2 right-2 w-auto p-2 flex justify-between items-center">
                   {" "}
                   <div className="flex gap-2">
-                    <h3 className="lg:text-xl text-sm bg-black text-white rounded-xl p-2 px-4">
+                    <h3 className="lg:text-xl text-sm bg-background/90 backdrop-blur-sm text-foreground border border-border rounded-[3px] p-2 px-4">
                       {project.title}
                     </h3>
 
@@ -270,7 +270,7 @@ export default function index() {
                       <TooltipProvider key={index}>
                         <Tooltip>
                           <TooltipTrigger>
-                            <div className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black">
+                            <div className="lg:w-12 w-10 lg:h-12 h-10 text-foreground grid place-content-center rounded-full bg-background/90 backdrop-blur-sm border border-border hover:bg-accent transition-colors">
                               {tech.icon}
                             </div>
                           </TooltipTrigger>
@@ -285,7 +285,7 @@ export default function index() {
                     {project.github && project.githubLink && (
                       <Link
                         href={project.githubLink}
-                        className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
+                        className="lg:w-12 w-10 lg:h-12 h-10 text-foreground grid place-content-center rounded-full bg-background/90 backdrop-blur-sm border border-border hover:bg-accent transition-colors"
                         target="_blank"
                       >
                         {project.github}
@@ -294,7 +294,7 @@ export default function index() {
                     {project.figma && project.figmaLink && (
                       <Link
                         href={project.figmaLink}
-                        className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
+                        className="lg:w-12 w-10 lg:h-12 h-10 text-foreground grid place-content-center rounded-full bg-background/90 backdrop-blur-sm border border-border hover:bg-accent transition-colors"
                         target="_blank"
                       >
                         {project.figma}
@@ -303,7 +303,7 @@ export default function index() {
                     {project.link && (
                       <Link
                         href={project.link}
-                        className="lg:w-12 w-10 lg:h-12 h-10 text-white grid place-content-center rounded-full bg-black"
+                        className="lg:w-12 w-10 lg:h-12 h-10 text-foreground grid place-content-center rounded-full bg-background/90 backdrop-blur-sm border border-border hover:bg-accent transition-colors"
                         target="_blank"
                       >
                         <MoveUpRight />

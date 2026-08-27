@@ -23,6 +23,11 @@ export default {
       description:
         "J'utilise Tailwind CSS pour le style, car il me permet de créer rapidement des interfaces utilisateur modernes et responsives.",
     },
+    skill4: {
+      name: "Claude Code",
+      description:
+        "Je travaille avec Claude Code pour les refactos, le débogage et pour livrer des fonctionnalités full-stack plus vite, sans perdre le contrôle du code.",
+    },
     otherSkills: "Autres compétences...",
   },
   projects: {

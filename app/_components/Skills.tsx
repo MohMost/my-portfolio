@@ -1,16 +1,10 @@
 import Postgres from "./icons/Postgres";
 import ReactIcon from "./icons/React";
 import Tailwind from "./icons/Tailwind";
+import ClaudeIcon from "./icons/Claude";
 import Section from "./Section";
+import Frame from "./Frame";
 import Code from "@/components/ui/Code";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -42,7 +36,7 @@ const Skills = async () => {
     purple: "#A259FF",
   };
   return (
-    <Section id="skills" className="flex flex-col gap-4 my-28">
+    <Section id="skills" className="flex flex-col gap-4 my-40">
       <div className="flex flex-row justify-start items-center gap-2 w-fit">
         <h2 className="text-xl font-semibold tracking-wider text-secondary">
           {t("skills.title")} {/* Skills */}
@@ -50,93 +44,86 @@ const Skills = async () => {
         <div className="md:w-[300px] w-full h-0.5 bg-secondary/20"></div>
       </div>
 
-      <h3 className="dark:text-gray-400 text-gray-700 text-5xl font-bold fira-sans">
+      <h3 className="text-foreground text-4xl md:text-5xl font-heading tracking-tight">
         {t("skills.subtitle")} {/* The big three... */}
       </h3>
-      <div className="flex md:flex-row flex-col gap-4 my-8">
-        <Card className="group flex flex-col gap-4 ">
-          <CardHeader>
-            <CardTitle>
-              <ReactIcon
-                width={50}
-                height={50}
-                className="fill-gray-500 group-hover:fill-[#00D8FF]"
-              />
-            </CardTitle>
-            <CardDescription className="dark:text-gray-400 text-gray-600 text-3xl dark:group-hover:text-primary/70 group-hover:text-secondary/70">
-              <span>{t("skills.skill1.name")}</span>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="dark:text-gray-400 text-gray-700 leading-relaxed">
+      <Frame className="my-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-border">
+          <div className="group flex flex-col gap-3 p-6 md:p-8 hover:bg-white dark:hover:bg-[hsl(var(--card))]">
+            <ReactIcon
+              width={40}
+              height={40}
+              className="fill-muted-foreground group-hover:fill-[#00D8FF] transition-colors"
+            />
+            <h3 className="font-bold text-lg text-foreground">
+              {t("skills.skill1.name")}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
               {t("skills.skill1.description")
                 .split(/(React|Next\.js|TypeScript)/)
                 .map((part, index) =>
                   part === "React" ||
                   part === "Next.js" ||
                   part === "TypeScript" ? (
-                    <Code key={index}>{part}</Code>
+                    <Code key={index} className="text-sm">
+                      {part}
+                    </Code>
                   ) : (
                     part
-                  )
+                  ),
                 )}
             </p>
-          </CardContent>
-        </Card>
-        <Card className="group flex flex-col gap-4">
-          <CardHeader>
-            <CardTitle>
-              <Postgres
-                width={50}
-                height={50}
-                className="fill-gray-500 group-hover:fill-[#336791]"
-              />
-            </CardTitle>
-            <CardDescription>
-              <h3 className="dark:text-gray-400 text-gray-600 text-3xl dark:group-hover:text-primary/70 group-hover:text-secondary/70">
-                {t("skills.skill2.name")}
-              </h3>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="dark:text-gray-400 text-gray-700 leading-relaxed">
+          </div>
+          <div className="group flex flex-col gap-3 p-6 md:p-8 hover:bg-white dark:hover:bg-[hsl(var(--card))]">
+            <Postgres
+              width={40}
+              height={40}
+              className="fill-muted-foreground group-hover:fill-[#336791] transition-colors"
+            />
+            <h3 className="font-bold text-lg text-foreground">
+              {t("skills.skill2.name")}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
               {t("skills.skill2.description").split("PostgreSQL")[0]}
-              <Code>PostgreSQL</Code>
+              <Code className="text-sm">PostgreSQL</Code>
               {t("skills.skill2.description").split("PostgreSQL")[1]}
             </p>
-          </CardContent>
-        </Card>
-        <Card className="group flex flex-col gap-4">
-          <CardHeader>
-            <CardTitle>
-              <Tailwind
-                width={50}
-                height={50}
-                className="fill-gray-500 group-hover:fill-[#44a8b3]"
-              />
-            </CardTitle>
-            <CardDescription>
-              <h3 className="dark:text-gray-400 text-gray-600 text-3xl dark:group-hover:text-primary/70 group-hover:text-secondary/70">
-                {t("skills.skill3.name")}
-              </h3>
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="dark:text-gray-400 text-gray-700 leading-relaxed">
+          </div>
+          <div className="group flex flex-col gap-3 p-6 md:p-8 hover:bg-white dark:hover:bg-[hsl(var(--card))]">
+            <Tailwind
+              width={40}
+              height={40}
+              className="fill-muted-foreground group-hover:fill-[#44a8b3] transition-colors"
+            />
+            <h3 className="font-bold text-lg text-foreground">
+              {t("skills.skill3.name")}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
               {t("skills.skill3.description").split("Tailwind CSS")[0]}
-              <Code>Tailwind CSS</Code>
+              <Code className="text-sm">Tailwind CSS</Code>
               {t("skills.skill3.description").split("Tailwind CSS")[1]}
             </p>
-          </CardContent>
-        </Card>
-      </div>
+          </div>
+          <div className="group flex flex-col gap-3 p-6 md:p-8 hover:bg-white dark:hover:bg-[hsl(var(--card))]">
+            <ClaudeIcon
+              size={40}
+              className="fill-muted-foreground group-hover:fill-[#d97757] transition-colors"
+            />
+            <h3 className="font-bold text-lg text-foreground">
+              {t("skills.skill4.name")}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {t("skills.skill4.description").split("Claude Code")[0]}
+              <Code className="text-sm">Claude Code</Code>
+              {t("skills.skill4.description").split("Claude Code")[1]}
+            </p>
+          </div>
+        </div>
+      </Frame>
 
       <Drawer>
         <DrawerTrigger asChild>
-          <Button
-            variant={"link"}
-            className="dark:text-primary text-secondary font-semibold text-lg"
-          >
+          <Button variant={"link"} className="font-semibold text-lg">
             {t("skills.otherSkills")}
           </Button>
         </DrawerTrigger>
@@ -158,7 +145,7 @@ const Skills = async () => {
                 <MongoDBIcon
                   width={50}
                   height={50}
-                  className="fill-gray-500 hover:fill-[#13aa52]"
+                  className="fill-muted-foreground hover:fill-[#13aa52]"
                 />
               </div>
               <div className="group flex flex-col items-center">
@@ -204,7 +191,7 @@ const Skills = async () => {
                 <OpenAIIcon
                   width={50}
                   height={50}
-                  className="fill-gray-500 group-hover:fill-[#17a683]"
+                  className="fill-muted-foreground group-hover:fill-[#17a683]"
                 />
               </div>
             </div>

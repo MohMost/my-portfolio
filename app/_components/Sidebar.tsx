@@ -7,13 +7,13 @@ import InstagramIcon from "./icons/InstagramIcon";
 function Sidebar() {
   return (
     <div className="md:flex hidden fixed z-50 right-auto flex-col bottom-0 left-0 px-4 lg:mx-8 gap-8 justify-between w-[60px] items-center">
-      <ul className="flex w-full flex-col gap-6 text-white">
+      <ul className="flex w-full flex-col gap-6">
         <li className=" w-full text-base">
           <Link
             className="flex justify-center"
             href="https://github.com/MohMost"
           >
-            <GithubIcon size={25} className="fill-gray-700 dark:fill-white" />
+            <GithubIcon size={25} className="fill-muted-foreground hover:fill-foreground transition-colors" />
           </Link>
         </li>
         <li className="text-base">
@@ -21,7 +21,7 @@ function Sidebar() {
             className="flex justify-center"
             href="https://www.linkedin.com/in/mostefai-mohamed/"
           >
-            <LinkedinIcon size={25} className="fill-gray-700 dark:fill-white" />
+            <LinkedinIcon size={25} className="fill-muted-foreground hover:fill-foreground transition-colors" />
           </Link>
         </li>
         <li className=" text-base">
@@ -31,12 +31,12 @@ function Sidebar() {
           >
             <InstagramIcon
               size={25}
-              className="fill-gray-700 dark:fill-white"
+              className="fill-muted-foreground hover:fill-foreground transition-colors"
             />
           </Link>
         </li>
       </ul>
-      <div className="flex bg-gray-700 dark:bg-gray-300  h-20 justify-center w-[1px]" />
+      <div className="flex bg-border h-20 justify-center w-px" />
     </div>
   );
 }

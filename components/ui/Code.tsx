@@ -9,7 +9,7 @@ function Code({
   return (
     <span
       className={cn(
-        "text-foreground text-base bg-accent/30 border border-accent px-1.5 py-0.5 rounded fira-sans",
+        "text-foreground text-base bg-muted border border-border px-1.5 py-0.5 rounded-[3px] font-mono",
         className
       )}
       {...props}
